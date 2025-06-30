@@ -1,197 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Alejandra Carrillo-Carlos</title>
+  <meta charset="UTF-8">
+  <title>Projects - Alejandra Carrillo-Carlos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #ffffff;
+      background-color: #ffffff;
       color: #000000;
-      line-height: 1.6;
-      font-size: 1.07rem;
+      margin: 0;
+      padding: 0;
     }
 
     nav#nav {
+      background: #f0f0f0;
       padding: 1rem 2rem;
-      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
 
     nav#nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
     }
 
     nav#nav ul li a {
       color: #000;
       text-decoration: none;
+      font-size: 1.1rem;
       font-weight: 600;
-      padding-bottom: 0.3rem;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s ease-in-out;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out;
     }
 
-    nav#nav ul li a:hover {
-      border-color: #000;
+    nav#nav ul li a:hover,
+    nav#nav ul li a:focus {
+      background-color: #dcdcdc;
     }
 
-    #top {
-      display: flex;
-      gap: 3rem;
-      align-items: flex-start;
-      margin: 2rem 2rem;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+    nav#nav ul li a:active {
+      background-color: #c0c0c0;
     }
 
-    .profile {
-      flex: 0 0 230px;
+    main {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
       text-align: left;
     }
 
-    .profile img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
+    h1 {
+      font-size: 2rem;
       margin-bottom: 1rem;
-      border: 3px solid #ccc;
+      border-bottom: 2px solid #000;
+      padding-bottom: 0.4rem;
     }
 
-    .profile h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .profile p {
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .contact-info {
-      list-style: none;
-      padding: 0;
-      margin-top: 0.8rem;
-    }
-
-    .contact-info li {
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-    }
-
-    .contact-info li i {
-      width: 20px;
-      text-align: center;
-      margin-right: 8px;
+    p {
+      font-size: 1.1rem;
       color: #333;
     }
 
-    .contact-info a {
+    a {
       color: #000;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
       text-decoration: underline;
-    }
-
-    .text {
-      flex: 1;
-      min-width: 300px;
-      max-width: 700px;
-      text-align: left;
-    }
-
-    .text header h1 {
-      font-size: 1.9rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #000;
-      padding-bottom: 0.3rem;
-    }
-
-    .text h2 {
-      font-size: 1.25rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #000;
-      padding-bottom: 0.2rem;
-    }
-
-    .text p {
-      margin-bottom: 1.2rem;
-    }
-
-    @media (max-width: 700px) {
-      #top {
-        flex-direction: column;
-        margin: 2rem;
-      }
-
-      .profile {
-        width: 100%;
-        margin-bottom: 2rem;
-      }
-
-      .profile img {
-        margin-bottom: 1rem;
-      }
     }
   </style>
 </head>
 <body>
 
   <nav id="nav">
-    <ul>
+     <ul>
       <li><a href="index.html#top">Alejandra Carrillo</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="talks.html">Talks</a></li>
       <li><a href="cv_dulce_alejandra.pdf">CV</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li> 
+      <li><a href="contact.html">Contact</a></li>   
     </ul>
   </nav>
 
-  <section id="top">
-    <aside class="profile">
-      <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
-      <h2>Alejandra Carrillo-Carlos</h2>
-      <p><strong>Genomic Sciences undergraduate student</strong></p>
-      <ul class="contact-info">
-        <li><i class="fas fa-location-dot"></i>Cuernavaca, Mor., México</li>
-        <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com"> Email</a></li>
-        <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank"> GitHub</a></li>
-      </ul>
-    </aside>
-
-    <div class="text">
-      <header>
-        <h1>About Me</h1>
-      </header>
-      <p>I am a Genomic Sciences undergraduate student at the National Autonomous University of Mexico (UNAM) with a strong interest in immunology and cancer immunology. My academic and research focus lies in understanding the genomic and molecular mechanisms that regulate immune responses. I am particularly interested in how computational biology and bioinformatics can be applied to identify key immune-related genes, cellular interactions, and signaling pathways that influence tumor progression.</p>
-      
-      <h2>Research Interests</h2>
-      <p>Cancer immunology · Neuroimmunology · Neurodegenerative diseases · Immunogenomics · Tumor microenvironment · Translational immunology · Autoimmune Diseases · Epigenomics · Bioinformatics · Computational biology</p>
-
-      <h2>Research Experience</h2>
-      <p><strong>Institute of Biotechnology | Laboratory of Dr. Yvonne Jane Rosenstein Azoulay</strong> | Undergraduate researcher <br />
-      Dec 2024 – Present</p>
-
-      <p><strong>Center for Genomic Sciences | Laboratory of Dr. Julio A. Freyre-Gonzalez</strong> | Undergraduate researcher <br />
-      Dec 2024 – Jun 2025</p>
-    </div>
-  </section>
+  <main>
+    <h1>Projects</h1>
+  </main>
 
 </body>
 </html>
