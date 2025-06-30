@@ -1,11 +1,15 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Alejandra Carrillo-Carlos</title>
   <meta charset="utf-8" />
+  <title>Alejandra Carrillo-Carlos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-y5DdX1j9kEzgB+YGcwEKTxq9avz5zPbPRt7v5uV94e0X2n3YnxFeg+Y+bo7XvNj5z9TPV/ghnSmGlMx3w+PSbw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #ffffff;
@@ -30,7 +34,6 @@
       gap: 2rem;
       max-width: 1000px;
       margin: 0 auto;
-      padding: 0;
     }
 
     nav#nav ul li a {
@@ -43,13 +46,8 @@
       transition: all 0.2s ease-in-out;
     }
 
-    nav#nav ul li a:hover,
-    nav#nav ul li a:focus {
+    nav#nav ul li a:hover {
       background-color: #dcdcdc;
-    }
-
-    nav#nav ul li a:active {
-      background-color: #c0c0c0;
     }
 
     #top {
@@ -60,50 +58,71 @@
       margin: 2rem auto;
       padding: 0 2rem;
       flex-wrap: wrap;
-      justify-content: flex-start;
     }
 
-    #top .profile {
+    .profile {
       flex: 0 0 250px;
       text-align: left;
     }
 
-    #top .profile img {
+    .profile img {
       width: 100%;
       border-radius: 8px;
       object-fit: cover;
       margin-bottom: 1rem;
     }
 
-    #top .profile h2 {
+    .profile h2 {
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 0.3rem;
     }
 
-    #top .profile p {
+    .profile p {
       font-size: 0.95rem;
       margin-bottom: 0.4rem;
     }
 
-    #top .profile a {
+    .contact-info {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.8rem;
+    }
+
+    .contact-info li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-info li i {
+      width: 20px;
+      text-align: center;
+      margin-right: 8px;
+      color: #333;
+    }
+
+    .contact-info a {
       color: #000;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
       text-decoration: underline;
     }
 
-    #top .text {
+    .text {
       flex: 1;
       min-width: 300px;
     }
 
-    #top .text header h1 {
+    .text header h1 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
       border-bottom: 2px solid #000;
       padding-bottom: 0.3rem;
     }
 
-    #top .text h2 {
+    .text h2 {
       font-size: 1.2rem;
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
@@ -111,14 +130,14 @@
       padding-bottom: 0.2rem;
     }
 
-    #top .text p {
+    .text p {
       font-size: 1rem;
       margin-bottom: 1.2rem;
     }
 
     @media (max-width: 700px) {
       #top { flex-direction: column; }
-      #top .profile { width: 100%; margin-bottom: 2rem; }
+      .profile { width: 100%; margin-bottom: 2rem; }
     }
   </style>
 </head>
@@ -133,7 +152,6 @@
       <li><a href="cv_dulce_alejandra.pdf">CV</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="contact.html">Contact</a></li> 
-      
     </ul>
   </nav>
 
@@ -142,8 +160,14 @@
       <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
       <h2>Alejandra Carrillo-Carlos</h2>
       <p><strong>Genomic Sciences undergraduate student</strong></p>
-      <p>Cuernavaca, Mor., México</p>
-      <p>Email: <a href="mailto:aleccarrillocarlos@gmail.com">aleccarrillocarlos@gmail.com</a></p>
+      <ul class="contact-info">
+        <li><i class="fas fa-location-dot"></i>Cuernavaca, Mor., México</li>
+        <li><i class="fas fa-envelope"></i><a href="mailto:aleccarrillocarlos@gmail.com"> Email</a></li>
+        <li><i class="fab fa-orcid"></i><a href="https://orcid.org/tu-id" target="_blank"> ORCID</a></li>
+        <li><i class="fab fa-github"></i><a href="https://github.com/tuusuario" target="_blank"> GitHub</a></li>
+        <li><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/tuusuario" target="_blank"> LinkedIn</a></li>
+        <li><i class="fab fa-x-twitter"></i><a href="https://twitter.com/tuusuario" target="_blank"> X (formerly Twitter)</a></li>
+      </ul>
     </aside>
 
     <div class="text">
@@ -156,13 +180,12 @@
       <p>Cancer immunology · Neuroimmunology · Neurodegenerative diseases · Immunogenomics · Tumor microenvironment · Translational immunology · Autoimmune Diseases · Epigenomics · Bioinformatics · Computational biology</p>
 
       <h2>Research Experience</h2>
-      <p><strong> Institute of Biotechnology | Laboratory of Dr. Yvonne Jane Rosenstein Azoulay</strong> | Undergraduate researcher <br />
+      <p><strong>Institute of Biotechnology | Laboratory of Dr. Yvonne Jane Rosenstein Azoulay</strong> | Undergraduate researcher <br />
       Dec 2024 – Present<br />
       </p>
 
       <p><strong>Center for Genomic Sciences | Laboratory of Dr. Julio A. Freyre-Gonzalez</strong> | Undergraduate researcher <br />
-      Dec 2024 – Jun 2025<br /
-      </p>
+      Dec 2024 – Jun 2025<br /></p>
     </div>
   </section>
 
