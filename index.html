@@ -22,12 +22,12 @@
     }
 
     nav#nav {
-      background: #ffe4ec;
+      background: #f0f0f0; /* gris suave */
       padding: 1rem 2rem;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
 
     nav#nav ul {
@@ -50,16 +50,16 @@
 
     nav#nav ul li a:hover,
     nav#nav ul li a:focus {
-      background-color: #f8c2d1;
+      background-color: #dcdcdc; /* gris más oscuro al pasar el mouse */
     }
 
     nav#nav ul li a:active {
-      background-color: #f48fb1;
+      background-color: #c0c0c0;
     }
 
     #top {
       display: flex;
-      gap: 2rem;
+      gap: 3rem;
       align-items: flex-start;
       max-width: 1000px;
       margin: 2rem auto;
@@ -70,11 +70,6 @@
 
     #top .profile {
       flex: 0 0 250px;
-      background: #f8f8f8;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
       text-align: left;
     }
 
@@ -86,9 +81,9 @@
     }
 
     #top .profile h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
     #top .profile p {
@@ -129,7 +124,7 @@
     footer {
       margin-top: auto;
       padding: 1rem 0;
-      background: #ffe4ec;
+      background: #f0f0f0;
       color: #000;
       text-align: center;
       font-size: 0.9rem;
@@ -163,7 +158,6 @@
   <!-- Sección principal -->
   <section id="top">
     <aside class="profile">
-      <!-- Si no tienes imagen aún, puedes dejar el src vacío o usar un avatar temporal -->
       <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
       <h2>Alejandra Carrillo-Carlos</h2>
       <p><strong>Genomic Sciences undergraduate student</strong></p>
