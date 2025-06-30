@@ -21,6 +21,22 @@
       font-size: 1.15rem;
     }
 
+    /* Enlaces generales: azul claro subrayado */
+    a {
+      color: #59a3d4;
+      text-decoration: underline;
+    }
+
+    /* Enlaces en la sección de contacto personal: negros sin subrayado */
+    .contact-info a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
     nav#nav {
       padding: 1rem 2rem;
       border-bottom: 1px solid #ccc;
@@ -99,12 +115,6 @@
       color: #333;
     }
 
-    /* Aquí todos los enlaces en azul claro y subrayados */
-    a {
-      color: #1e90ff; /* azul claro */
-      text-decoration: underline;
-    }
-
     .text {
       flex: 1;
       min-width: 300px;
@@ -172,7 +182,7 @@
       <header>
         <h1>Contact Information</h1>
       </header>
-      <p> Hi! My contact information is below: </p>
+      <p>Hi! My contact information is below:</p>
       <p>- Email: <a href="mailto:alecarrillocarlos@gmail.com">alecarrillocarlos@gmail.com</a></p>
       <p>- Email: <a href="mailto:carrillo@lcg.unam.mx">carrillo@lcg.unam.mx</a></p>
       <p>- Email: <a href="mailto:alejandra.carrillo.carlos@ibt.unam.mx">alejandra.carrillo.carlos@ibt.unam.mx</a></p>
