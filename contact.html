@@ -2,26 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact</title>
+  <title>Contact - Alejandra Carrillo-Carlos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #ffffff;
       color: #000000;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav#nav {
+      background: #f0f0f0;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    nav#nav ul {
+      list-style: none;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-size: 1.2rem;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    nav#nav ul li a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    nav#nav ul li a:hover,
+    nav#nav ul li a:focus {
+      background-color: #dcdcdc;
+    }
+
+    nav#nav ul li a:active {
+      background-color: #c0c0c0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #000;
+      padding-bottom: 0.4rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #333;
     }
 
     a {
       color: #000;
       text-decoration: underline;
     }
+
+    footer {
+      margin-top: 4rem;
+      padding: 1rem 0;
+      background: #f0f0f0;
+      color: #000;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
-  <p>Email: <a href="mailto:aleccarrillocarlos@gmail.com">aleccarrillocarlos@gmail.com</a></p>
+
+  <!-- Navegación -->
+  <nav id="nav">
+    <ul>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="cv_dulce_alejandra.pdf">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html#top">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <h1>Contact</h1>
+    <p>Email: <a href="mailto:aleccarrillocarlos@gmail.com">aleccarrillocarlos@gmail.com</a></p>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    &copy; 2025 Alejandra Carrillo-Carlos
+  </footer>
+
 </body>
 </html>
