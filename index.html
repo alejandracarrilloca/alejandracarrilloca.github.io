@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+.<!DOCTYPE HTML>
 <html lang="en">
 <head>
   <title>Dulce Alejandra Carrillo Carlos</title>
@@ -23,32 +23,44 @@
       flex-direction: column;
     }
 
-    /* Navegacion */
+    /* Navegacion rosa suave */
     nav#nav {
-      background: #282c34;
-      padding: 1rem 0;
+      background: #ffe4ec; /* rosa bajito */
+      padding: 1rem 2rem;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
     }
+
     nav#nav ul {
       list-style: none;
-      max-width: 900px;
-      margin: 0 auto;
       display: flex;
-      justify-content: center;
       gap: 2rem;
     }
+
     nav#nav ul li a {
-      color: #fff;
+      color: #b8326b; /* rosa oscuro para texto */
       text-decoration: none;
-      font-weight: 600;
       font-size: 1.1rem;
       transition: color 0.3s ease;
     }
+
     nav#nav ul li a:hover {
-      color: #61dafb;
+      color: #f06292; /* rosa más brillante al hover */
+    }
+
+    /* Datos a la derecha */
+    .nav-info {
+      color: #b8326b;
+      font-size: 0.9rem;
+      text-align: right;
+      line-height: 1.2;
+      font-weight: 500;
     }
 
     /* Contenedor general */
@@ -64,7 +76,7 @@
       font-weight: 700;
       color: #222;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #61dafb;
+      border-bottom: 2px solid #f06292; /* rosa para detalles */
       padding-bottom: 0.3rem;
     }
 
@@ -86,13 +98,6 @@
       color: #666;
     }
 
-    /* CV */
-    #cv iframe {
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-    }
-
     /* Projects */
     #projects p {
       font-size: 1.1rem;
@@ -106,17 +111,27 @@
     footer {
       margin-top: auto;
       padding: 1rem 0;
-      background: #282c34;
-      color: #ccc;
+      background: #ffe4ec;
+      color: #b8326b;
       text-align: center;
       font-size: 0.9rem;
+      font-weight: 600;
     }
 
     /* Responsive */
     @media (max-width: 600px) {
-      nav#nav ul {
+      nav#nav {
         flex-direction: column;
         gap: 1rem;
+        align-items: flex-start;
+      }
+
+      nav#nav ul {
+        gap: 1rem;
+      }
+
+      .nav-info {
+        text-align: left;
       }
     }
   </style>
@@ -128,9 +143,13 @@
   <nav id="nav">
     <ul>
       <li><a href="#top">About</a></li>
-      <li><a href="#cv">CV</a></li>
       <li><a href="#projects">Projects</a></li>
     </ul>
+
+    <div class="nav-info">
+      <div><strong>Dulce Alejandra Carrillo Carlos</strong></div>
+      <div>correo@ejemplo.com</div>
+    </div>
   </nav>
 
   <!-- Sobre mi -->
@@ -151,14 +170,6 @@
     <p><strong>Laboratory of Dr. Julio A. Freyre-Gonzalez</strong> (Systems Biology, CCG UNAM)<br />
     Dec 2024 – Jun 2025<br />
     - Biological networks, omics data, algorithm development.</p>
-  </article>
-
-  <!-- CV -->
-  <article id="cv" class="container">
-    <header>
-      <h2>Curriculum Vitae</h2>
-    </header>
-    <iframe src="cv_dulce_alejandra.pdf" style="width:100%; height:800px;"></iframe>
   </article>
 
   <!-- Projects -->
