@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <style>
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
@@ -15,17 +14,16 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f7fa;
-      color: #333;
+      background: #ffffff;
+      color: #000000; /* letras negras */
       line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    /* Navegacion rosa suave */
     nav#nav {
-      background: #ffe4ec; /* rosa bajito */
+      background: #ffe4ec;
       padding: 1rem 2rem;
       position: sticky;
       top: 0;
@@ -43,17 +41,16 @@
     }
 
     nav#nav ul li a {
-      color: #b8326b; /* rosa oscuro para texto */
+      color: #000000;
       text-decoration: none;
       font-size: 1.1rem;
       transition: color 0.3s ease;
     }
 
     nav#nav ul li a:hover {
-      color: #f06292; /* rosa más brillante al hover */
+      text-decoration: underline;
     }
 
-    /* Contenedor general */
     .container {
       max-width: 900px;
       margin: 2rem auto;
@@ -61,16 +58,14 @@
       width: 100%;
     }
 
-    /* Section headers */
     header h1, header h2 {
       font-weight: 700;
-      color: #222;
+      color: #000;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #f06292; /* rosa para detalles */
+      border-bottom: 2px solid #000;
       padding-bottom: 0.3rem;
     }
 
-    /* Sección About: diseño dos columnas */
     #top {
       display: flex;
       gap: 2rem;
@@ -81,19 +76,14 @@
       flex-wrap: wrap;
     }
 
-    #top .text {
-      flex: 1 1 55%;
-      min-width: 280px;
-    }
-
     #top .profile {
       flex: 1 1 35%;
       min-width: 220px;
-      background: #fff;
-      border: 1px solid #f06292;
+      background: #f8f8f8;
+      border: 1px solid #ccc;
       border-radius: 8px;
       padding: 1rem;
-      box-shadow: 0 4px 8px rgb(240 128 153 / 0.2);
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
       text-align: center;
     }
 
@@ -103,40 +93,43 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
-      border: 3px solid #f06292;
+      border: 2px solid #999;
     }
 
     #top .profile h2 {
       margin-bottom: 0.3rem;
-      color: #b8326b;
+      color: #000;
       font-weight: 700;
     }
 
     #top .profile p {
       font-size: 1rem;
-      color: #666;
+      color: #000;
       word-wrap: break-word;
-      user-select: text;
     }
 
-    /* Textos dentro About */
+    #top .text {
+      flex: 1 1 60%;
+      min-width: 280px;
+    }
+
     #top p {
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
-      color: #444;
+      color: #000;
     }
 
     #top p strong {
-      color: #222;
+      color: #000;
     }
+
     #top p + p {
       margin-top: 0.5rem;
       margin-bottom: 1.5rem;
       font-style: italic;
-      color: #666;
+      color: #333;
     }
 
-    /* Projects */
     #projects {
       max-width: 900px;
       margin: 2rem auto;
@@ -144,38 +137,36 @@
     }
 
     #projects header h2 {
-      border-bottom: 2px solid #f06292;
-      color: #222;
+      border-bottom: 2px solid #000;
+      color: #000;
       margin-bottom: 1rem;
     }
 
     #projects p {
       font-size: 1.1rem;
-      color: #555;
+      color: #333;
       font-style: italic;
       text-align: center;
       margin-top: 3rem;
     }
 
-    /* Footer opcional */
     footer {
       margin-top: auto;
       padding: 1rem 0;
       background: #ffe4ec;
-      color: #b8326b;
+      color: #000;
       text-align: center;
       font-size: 0.9rem;
       font-weight: 600;
     }
 
-    /* Responsive */
     @media (max-width: 700px) {
       #top {
         flex-direction: column;
       }
 
       #top .profile {
-        margin-top: 2rem;
+        margin-bottom: 2rem;
         max-width: 250px;
         margin-left: auto;
         margin-right: auto;
@@ -186,7 +177,7 @@
 </head>
 <body>
 
-  <!-- Navegacion -->
+  <!-- Navegación -->
   <nav id="nav">
     <ul>
       <li><a href="#top">About</a></li>
@@ -195,11 +186,17 @@
     </ul>
   </nav>
 
-  <!-- Sobre mi con dos columnas -->
+  <!-- Sección principal con datos a la izquierda -->
   <section id="top">
+    <aside class="profile">
+      <img src="tu-foto.jpg" alt="Foto de Dulce Alejandra Carrillo Carlos" />
+      <h2>Dulce Alejandra Carrillo Carlos</h2>
+      <p>alecarrillocarlos@gmail.com</p>
+    </aside>
+
     <div class="text">
       <header>
-        <h1>Dulce Alejandra Carrillo Carlos</h1>
+        <h1>About Me</h1>
       </header>
       <p>I am a Genomic Sciences undergraduate student at the National Autonomous University of Mexico (UNAM) with a strong interest in immunology and cancer immunology. My academic and research focus lies in understanding the genomic and molecular mechanisms that regulate immune responses. I am particularly interested in how computational biology and bioinformatics can be applied to identify key immune-related genes, cellular interactions, and signaling pathways that influence tumor progression.</p>
 
@@ -215,15 +212,9 @@
       Dec 2024 – Jun 2025<br />
       - Biological networks, omics data, algorithm development.</p>
     </div>
-
-    <aside class="profile">
-      <img src="tu-foto.jpg" alt="Foto de Dulce Alejandra Carrillo Carlos" />
-      <h2>Dulce Alejandra Carrillo Carlos</h2>
-      <p>correo@ejemplo.com</p>
-    </aside>
   </section>
 
-  <!-- Projects -->
+  <!-- Proyectos -->
   <section id="projects">
     <header>
       <h2>Projects</h2>
@@ -231,6 +222,7 @@
     <p>Coming soon...</p>
   </section>
 
+  <!-- Pie de página -->
   <footer>
     &copy; 2025 Dulce Alejandra Carrillo Carlos
   </footer>
