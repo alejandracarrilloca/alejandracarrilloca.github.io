@@ -22,16 +22,14 @@
     }
 
     nav#nav {
-      padding: 1rem 0;
+      padding: 1rem 2rem;
       border-bottom: 1px solid #ccc;
-      text-align: center;
     }
 
     nav#nav ul {
       list-style: none;
-      display: inline-flex;
+      display: flex;
       gap: 2rem;
-      padding: 0;
     }
 
     nav#nav ul li a {
@@ -51,16 +49,13 @@
       display: flex;
       gap: 3rem;
       align-items: flex-start;
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 2rem;
+      margin: 2rem 2rem;
       flex-wrap: wrap;
-      justify-content: center;
     }
 
     .profile {
       flex: 0 0 250px;
-      text-align: center;
+      text-align: left;
     }
 
     .profile img {
@@ -113,6 +108,7 @@
       flex: 1;
       min-width: 300px;
       max-width: 650px;
+      text-align: left;
     }
 
     .text header h1 {
@@ -137,7 +133,7 @@
     @media (max-width: 700px) {
       #top {
         flex-direction: column;
-        padding: 2rem;
+        margin: 2rem;
       }
 
       .profile {
@@ -146,7 +142,7 @@
       }
 
       .profile img {
-        margin: 0 auto 1rem;
+        margin-bottom: 1rem;
       }
     }
   </style>
