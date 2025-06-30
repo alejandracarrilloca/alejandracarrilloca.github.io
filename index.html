@@ -5,8 +5,7 @@
   <title>Alejandra Carrillo-Carlos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-y5DdX1j9kEzgB+YGcwEKTxq9avz5zPbPRt7v5uV94e0X2n3YnxFeg+Y+bo7XvNj5z9TPV/ghnSmGlMx3w+PSbw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       margin: 0;
@@ -19,54 +18,49 @@
       background: #ffffff;
       color: #000000;
       line-height: 1.6;
-      display: flex;
-      flex-direction: column;
+      font-size: 1.05rem;
     }
 
     nav#nav {
-      background: #f0f0f0;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      padding: 1rem 0;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
     }
 
     nav#nav ul {
       list-style: none;
-      display: flex;
+      display: inline-flex;
       gap: 2rem;
-      margin: 0;
+      padding: 0;
     }
 
     nav#nav ul li a {
       color: #000;
       text-decoration: none;
-      font-size: 1.1rem;
       font-weight: 600;
-      padding: 0.3rem 0.5rem;
-      border-radius: 4px;
-      transition: all 0.2s ease-in-out;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease-in-out;
     }
 
     nav#nav ul li a:hover {
-      background-color: #dcdcdc;
+      border-color: #000;
     }
 
     #top {
       display: flex;
       gap: 3rem;
       align-items: flex-start;
-      padding: 2rem 2rem 2rem 4rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 2rem;
       flex-wrap: wrap;
-      justify-content: flex-start;
-      max-width: none;
-      margin: 2rem 0;
+      justify-content: center;
     }
 
     .profile {
       flex: 0 0 250px;
-      text-align: left;
+      text-align: center;
     }
 
     .profile img {
@@ -75,17 +69,17 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
-      border: 3px solid #ddd;
+      border: 4px solid #ccc;
     }
 
     .profile h2 {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 0.3rem;
     }
 
     .profile p {
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin-bottom: 0.4rem;
     }
 
@@ -97,7 +91,6 @@
 
     .contact-info li {
       margin-bottom: 0.5rem;
-      font-size: 0.95rem;
     }
 
     .contact-info li i {
@@ -119,17 +112,18 @@
     .text {
       flex: 1;
       min-width: 300px;
+      max-width: 650px;
     }
 
     .text header h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
       border-bottom: 2px solid #000;
       padding-bottom: 0.3rem;
     }
 
     .text h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
       border-bottom: 1px solid #000;
@@ -137,7 +131,6 @@
     }
 
     .text p {
-      font-size: 1rem;
       margin-bottom: 1.2rem;
     }
 
@@ -150,11 +143,9 @@
       .profile {
         width: 100%;
         margin-bottom: 2rem;
-        align-items: center;
       }
 
       .profile img {
-        display: block;
         margin: 0 auto 1rem;
       }
     }
@@ -182,10 +173,7 @@
       <ul class="contact-info">
         <li><i class="fas fa-location-dot"></i>Cuernavaca, Mor., México</li>
         <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com"> Email</a></li>
-      <!--  <li><i class="fab fa-orcid"></i><a href="https://orcid.org/tu-id" target="_blank"> ORCID</a></li> -->
         <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank"> GitHub</a></li>
-     <!--     <li><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/tuusuario" target="_blank"> LinkedIn</a></li> 
-        <li><i class="fab fa-x-twitter"></i><a href="https://twitter.com/tuusuario" target="_blank"> X (formerly Twitter)</a></li>-->
       </ul>
     </aside>
 
