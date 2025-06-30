@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects - Alejandra Carrillo-Carlos</title>
+  <meta charset="utf-8" />
+  <title>Alejandra Carrillo-Carlos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-y5DdX1j9kEzgB+YGcwEKTxq9avz5zPbPRt7v5uV94e0X2n3YnxFeg+Y+bo7XvNj5z9TPV/ghnSmGlMx3w+PSbw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       margin: 0;
@@ -19,68 +18,54 @@
       background: #ffffff;
       color: #000000;
       line-height: 1.6;
-      display: flex;
-      flex-direction: column;
+      font-size: 1.07rem;
     }
 
     nav#nav {
-      background: #f0f0f0;
       padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border-bottom: 1px solid #ccc;
     }
 
     nav#nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0;
     }
 
     nav#nav ul li a {
       color: #000;
       text-decoration: none;
-      font-size: 1.1rem;
       font-weight: 600;
-      padding: 0.3rem 0.5rem;
-      border-radius: 4px;
-      transition: all 0.2s ease-in-out;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease-in-out;
     }
 
-    nav#nav ul li a:hover,
-    nav#nav ul li a:focus {
-      background-color: #dcdcdc;
-    }
-
-    nav#nav ul li a:active {
-      background-color: #c0c0c0;
+    nav#nav ul li a:hover {
+      border-color: #000;
     }
 
     #top {
       display: flex;
       gap: 3rem;
       align-items: flex-start;
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 2rem;
+      margin: 2rem 2rem;
       flex-wrap: wrap;
       justify-content: flex-start;
     }
 
     .profile {
-      flex: 0 0 250px;
+      flex: 0 0 230px;
       text-align: left;
     }
 
     .profile img {
-      width: 100%;
-      border-radius: 8px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
+      border: 3px solid #ccc;
     }
 
     .profile h2 {
@@ -94,42 +79,78 @@
       margin-bottom: 0.4rem;
     }
 
-    .profile a {
+    .contact-info {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.8rem;
+    }
+
+    .contact-info li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-info li i {
+      width: 20px;
+      text-align: center;
+      margin-right: 8px;
+      color: #333;
+    }
+
+    .contact-info a {
       color: #000;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
       text-decoration: underline;
     }
 
-    main {
+    .text {
       flex: 1;
       min-width: 300px;
+      max-width: 700px;
+      text-align: left;
     }
 
-    main h1 {
-      font-size: 1.8rem;
+    .text header h1 {
+      font-size: 1.9rem;
       margin-bottom: 1rem;
       border-bottom: 2px solid #000;
       padding-bottom: 0.3rem;
     }
 
-    main p {
-      font-size: 1rem;
-      color: #333;
+    .text h2 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #000;
+      padding-bottom: 0.2rem;
+    }
+
+    .text p {
       margin-bottom: 1.2rem;
     }
 
     @media (max-width: 700px) {
       #top {
         flex-direction: column;
+        margin: 2rem;
       }
+
       .profile {
         width: 100%;
         margin-bottom: 2rem;
+      }
+
+      .profile img {
+        margin-bottom: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  
+
   <nav id="nav">
     <ul>
       <li><a href="index.html#top">Alejandra Carrillo</a></li>
@@ -147,15 +168,29 @@
       <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
       <h2>Alejandra Carrillo-Carlos</h2>
       <p><strong>Genomic Sciences undergraduate student</strong></p>
-      <p><i class="fas fa-map-marker-alt"></i> Cuernavaca, Morelos, México</p>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:aleccarrillocarlos@gmail.com">aleccarrillocarlos@gmail.com</a></p>
+      <ul class="contact-info">
+        <li><i class="fas fa-location-dot"></i>Cuernavaca, Mor., México</li>
+        <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com"> Email</a></li>
+        <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank"> GitHub</a></li>
+      </ul>
     </aside>
 
-    <main>
-      <h1>Projects</h1>
-      <p>I've participated in the following projects:</p>
-      <!-- Puedes añadir aquí una lista de proyectos si gustas -->
-    </main>
+    <div class="text">
+      <header>
+        <h1>About Me</h1>
+      </header>
+      <p>I am a Genomic Sciences undergraduate student at the National Autonomous University of Mexico (UNAM) with a strong interest in immunology and cancer immunology. My academic and research focus lies in understanding the genomic and molecular mechanisms that regulate immune responses. I am particularly interested in how computational biology and bioinformatics can be applied to identify key immune-related genes, cellular interactions, and signaling pathways that influence tumor progression.</p>
+      
+      <h2>Research Interests</h2>
+      <p>Cancer immunology · Neuroimmunology · Neurodegenerative diseases · Immunogenomics · Tumor microenvironment · Translational immunology · Autoimmune Diseases · Epigenomics · Bioinformatics · Computational biology</p>
+
+      <h2>Research Experience</h2>
+      <p><strong>Institute of Biotechnology | Laboratory of Dr. Yvonne Jane Rosenstein Azoulay</strong> | Undergraduate researcher <br />
+      Dec 2024 – Present</p>
+
+      <p><strong>Center for Genomic Sciences | Laboratory of Dr. Julio A. Freyre-Gonzalez</strong> | Undergraduate researcher <br />
+      Dec 2024 – Jun 2025</p>
+    </div>
   </section>
 
 </body>
