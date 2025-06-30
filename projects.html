@@ -4,13 +4,23 @@
   <meta charset="UTF-8">
   <title>Projects - Alejandra Carrillo-Carlos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-y5DdX1j9kEzgB+YGcwEKTxq9avz5zPbPRt7v5uV94e0X2n3YnxFeg+Y+bo7XvNj5z9TPV/ghnSmGlMx3w+PSbw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #ffffff;
       color: #000000;
-      margin: 0;
-      padding: 0;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
     }
 
     nav#nav {
@@ -50,37 +60,84 @@
       background-color: #c0c0c0;
     }
 
-    main {
-      max-width: 800px;
-      margin: 4rem auto;
+    #top {
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 2rem auto;
       padding: 0 2rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .profile {
+      flex: 0 0 250px;
       text-align: left;
     }
 
-    h1 {
-      font-size: 2rem;
+    .profile img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #000;
-      padding-bottom: 0.4rem;
     }
 
-    p {
-      font-size: 1.1rem;
+    .profile h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .profile p {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .profile a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    main h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #000;
+      padding-bottom: 0.3rem;
+    }
+
+    main p {
+      font-size: 1rem;
       color: #333;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 700px) {
+      #top {
+        flex-direction: column;
+      }
+      .profile {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
     }
   </style>
 </head>
 <body>
   
   <nav id="nav">
-     <ul>
+    <ul>
       <li><a href="index.html#top">Alejandra Carrillo</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="talks.html">Talks</a></li>
       <li><a href="cv_dulce_alejandra.pdf">CV</a></li>
-      <li><a href="contact.html">Contact</a></li>      
-
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
@@ -89,14 +146,16 @@
       <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
       <h2>Alejandra Carrillo-Carlos</h2>
       <p><strong>Genomic Sciences undergraduate student</strong></p>
-      <p>Cuernavaca, Mor., México</p>
-      <p>Email: <a href="mailto:aleccarrillocarlos@gmail.com">aleccarrillocarlos@gmail.com</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> Cuernavaca, Morelos, México</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:aleccarrillocarlos@gmail.com">aleccarrillocarlos@gmail.com</a></p>
     </aside>
-  
-  <main>
-    <h1>Projects</h1>
-    <p>I've participated in the following proyects: </p>
-  </main>
+
+    <main>
+      <h1>Projects</h1>
+      <p>I've participated in the following projects:</p>
+      <!-- Puedes añadir aquí una lista de proyectos si gustas -->
+    </main>
+  </section>
 
 </body>
 </html>
