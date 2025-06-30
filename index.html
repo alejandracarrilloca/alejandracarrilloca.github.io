@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>Dulce Alejandra Carrillo Carlos</title>
+  <title>Alejandra Carrillo-Carlos</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <style>
     * {
       margin: 0;
@@ -15,9 +15,8 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #ffffff;
-      color: #000000; /* letras negras */
+      color: #000000;
       line-height: 1.6;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
@@ -29,125 +28,102 @@
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      font-weight: 600;
     }
 
     nav#nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
     nav#nav ul li a {
-      color: #000000;
+      color: #000;
       text-decoration: none;
       font-size: 1.1rem;
-      transition: color 0.3s ease;
+      font-weight: 600;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out;
     }
 
-    nav#nav ul li a:hover {
-      text-decoration: underline;
+    nav#nav ul li a:hover,
+    nav#nav ul li a:focus {
+      background-color: #f8c2d1;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      width: 100%;
-    }
-
-    header h1, header h2 {
-      font-weight: 700;
-      color: #000;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #000;
-      padding-bottom: 0.3rem;
+    nav#nav ul li a:active {
+      background-color: #f48fb1;
     }
 
     #top {
       display: flex;
       gap: 2rem;
       align-items: flex-start;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 0 2rem;
       flex-wrap: wrap;
+      justify-content: flex-start;
     }
 
     #top .profile {
-      flex: 1 1 35%;
-      min-width: 220px;
+      flex: 0 0 250px;
       background: #f8f8f8;
       border: 1px solid #ccc;
       border-radius: 8px;
       padding: 1rem;
       box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-      text-align: center;
+      text-align: left;
     }
 
     #top .profile img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+      width: 100%;
+      border-radius: 8px;
       object-fit: cover;
       margin-bottom: 1rem;
-      border: 2px solid #999;
     }
 
     #top .profile h2 {
-      margin-bottom: 0.3rem;
-      color: #000;
+      font-size: 1.2rem;
       font-weight: 700;
+      margin-bottom: 0.5rem;
     }
 
     #top .profile p {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    #top .profile a {
       color: #000;
-      word-wrap: break-word;
+      text-decoration: underline;
     }
 
     #top .text {
-      flex: 1 1 60%;
-      min-width: 280px;
+      flex: 1;
+      min-width: 300px;
     }
 
-    #top p {
-      margin-bottom: 1.5rem;
-      font-size: 1.05rem;
-      color: #000;
-    }
-
-    #top p strong {
-      color: #000;
-    }
-
-    #top p + p {
-      margin-top: 0.5rem;
-      margin-bottom: 1.5rem;
-      font-style: italic;
-      color: #333;
-    }
-
-    #projects {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    #projects header h2 {
-      border-bottom: 2px solid #000;
-      color: #000;
+    #top .text header h1 {
+      font-size: 1.8rem;
       margin-bottom: 1rem;
+      border-bottom: 2px solid #000;
+      padding-bottom: 0.3rem;
     }
 
-    #projects p {
-      font-size: 1.1rem;
-      color: #333;
-      font-style: italic;
-      text-align: center;
-      margin-top: 3rem;
+    #top .text h2 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #000;
+      padding-bottom: 0.2rem;
+    }
+
+    #top .text p {
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
     }
 
     footer {
@@ -166,14 +142,11 @@
       }
 
       #top .profile {
+        width: 100%;
         margin-bottom: 2rem;
-        max-width: 250px;
-        margin-left: auto;
-        margin-right: auto;
       }
     }
   </style>
-
 </head>
 <body>
 
@@ -181,17 +154,21 @@
   <nav id="nav">
     <ul>
       <li><a href="#top">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="cv_dulce_alejandra.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a></li>
+      <li><a href="projects.html" target="_blank" rel="noopener noreferrer">Projects</a></li>
+      <li><a href="cv_dulce_alejandra.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+      <li><a href="mailto:aleccarrillocarlos@gmail.com">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Sección principal con datos a la izquierda -->
+  <!-- Sección principal -->
   <section id="top">
     <aside class="profile">
-      <img src="tu-foto.jpg" alt="Foto de Dulce Alejandra Carrillo Carlos" />
-      <h2>Dulce Alejandra Carrillo Carlos</h2>
-      <p>alecarrillocarlos@gmail.com</p>
+      <!-- Si no tienes imagen aún, puedes dejar el src vacío o usar un avatar temporal -->
+      <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
+      <h2>Alejandra Carrillo-Carlos</h2>
+      <p><strong>Genomic Sciences undergraduate student</strong></p>
+      <p>Cuernavaca, Mor., México</p>
+      <p>Email: <a href="mailto:aleccarrillocarlos@gmail.com">aleccarrillocarlos@gmail.com</a></p>
     </aside>
 
     <div class="text">
@@ -214,17 +191,9 @@
     </div>
   </section>
 
-  <!-- Proyectos -->
-  <section id="projects">
-    <header>
-      <h2>Projects</h2>
-    </header>
-    <p>Coming soon...</p>
-  </section>
-
-  <!-- Pie de página -->
+  <!-- Pie -->
   <footer>
-    &copy; 2025 Dulce Alejandra Carrillo Carlos
+    &copy; 2025 Alejandra Carrillo-Carlos
   </footer>
 
 </body>
