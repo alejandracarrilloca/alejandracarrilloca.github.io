@@ -72,8 +72,7 @@
       gap: 4rem;
       margin: 3rem 10rem;
       flex-wrap: wrap;
-      justify-content: 
-      flex-start;
+      justify-content: flex-start;
     }
 
     .profile {
@@ -132,28 +131,32 @@
 
     .text header h1 {
       font-size: 1.4rem;
-      margin-top:2rem; 
+      margin-top: 2rem;
       margin-bottom: 1rem;
       border-bottom: 2px solid #000;
       padding-bottom: 0.3rem;
     }
 
-    .text h2 {
+    .text h2, .text h3 {
       font-size: 1.4rem;
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
       border-bottom: 1px solid #000;
       padding-bottom: 0.2rem;
     }
-    .text h3 {
-      font-size: 1.4rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #000;
-      padding-bottom: 0.2rem;
-    }
+
     .text p {
       margin-bottom: 1.2rem;
+    }
+
+    ul {
+      list-style-type: "● ";
+      padding-left: 1.5em;
+      margin-bottom: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5em;
     }
 
     @media (max-width: 700px) {
@@ -192,7 +195,7 @@
     <aside class="profile">
       <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo" />
       <h2>Alejandra Carrillo-Carlos</h2>
-      <p><strong> Genomic Sciences undergraduate student</strong></p>
+      <p><strong>Genomic Sciences undergraduate student</strong></p>
       <ul class="contact-info">
         <li><i class="fas fa-location-dot"></i>Cuernavaca, Mor., México</li>
         <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com">Email</a></li>
@@ -205,45 +208,41 @@
       <header>
         <h1><strong>About Me</strong></h1>
       </header>
-      <p>I am a <a href="https://www.ccg.unam.mx/en/" target="_blank">Genomic Sciences</a> undergraduate student at the <a href="https://www.unam.mx/" target="_blank">National Autonomous University of Mexico (UNAM)</a> with a strong interest 
-      in immunology and cancer immunology. My academic and research focus lies in understanding the genomic and molecular mechanisms 
-      that regulate immune responses. I am particularly interested in how computational biology and bioinformatics can be applied to 
-      identify key immune-related genes, cellular interactions, and signaling pathways that influence tumor progression.</p>
+      <p>I am a <a href="https://www.ccg.unam.mx/en/" target="_blank">Genomic Sciences</a> undergraduate student at the <a href="https://www.unam.mx/" target="_blank">National Autonomous University of Mexico (UNAM)</a> with a strong interest in immunology and cancer immunology. My academic and research focus lies in understanding the genomic and molecular mechanisms that regulate immune responses. I am particularly interested in how computational biology and bioinformatics can be applied to identify key immune-related genes, cellular interactions, and signaling pathways that influence tumor progression.</p>
 
       <h2><strong>Research Experience</strong></h2>
-      <p style="color: lightgray;"> 📍on-site | 💻 remote   </p>
-      <p><strong>Institute of Biotechnology | <a href="https://www.ibt.unam.mx/perfil/3283/dra-yvonne-jane-rosenstein-azoulay" target="_blank">Laboratory of Dr. Yvonne Jane Rosenstein Azoulay</a></strong> | Undergraduate researcher <br />
-      📍🇲🇽   Dec 2024 – Present</p> 
-
-      <p><strong>Center for Genomic Sciences | <a href="http://freyrelab.org/en/" target="_blank">Laboratory of Dr. Julio A. Freyre-Gonzalez</a></strong> | Trainee <br />
-      📍🇲🇽  |  💻   Dec 2024 – May 2025</p>
+      <p style="color: lightgray;">📍on-site | 💻 remote</p>
+      <p><strong>Institute of Biotechnology | <a href="https://www.ibt.unam.mx/perfil/3283/dra-yvonne-jane-rosenstein-azoulay" target="_blank">Laboratory of Dr. Yvonne Jane Rosenstein Azoulay</a></strong> | Undergraduate researcher<br>📍🇲🇽 Dec 2024 – Present</p> 
+      <p><strong>Center for Genomic Sciences | <a href="http://freyrelab.org/en/" target="_blank">Laboratory of Dr. Julio A. Freyre-Gonzalez</a></strong> | Trainee<br>📍🇲🇽 💻 Dec 2024 – May 2025</p>
 
       <h3><strong>Skills</strong></h3>
-      <p><strong>1. Computational</strong></p>     
+      <p><strong>1. Computational</strong></p>
       <p><strong>Python:</strong> ●●○ Intermediate</p>
       <p><strong>Bash/Shell:</strong> ●●○ Intermediate</p>
       <p><strong>C:</strong> ●○○ Basic</p>
-      </p>● Algorithm development: Implementation of custom algorithms for data processing, analysis, and interpretation of high-throughput biological data</p>
-      </p>● Exprimental data analysis: Experience using FlowJo for gating strategies and population identification and basic expirience using SnapGene </p>
-      </p>● Graph theory and network analysis: Graph theory applications for biological network analysis </p>
-      </p>● Data analysis and visualization: Data analysis (e.g. NumPy or Pandas) and creation of informative and publication-ready images using tools such as Matplotlib and Seaborn </p>
-      </p>● Reproducible research: Familiar with practices for version control (e.g. Git), reproducibility, and code documentation </p>
-      </p>● Design & Engineering Software: Adobe InDesign, AutoCAD, Fusion </p>
-      </p>● Operating Systems: Linux/Unix environments, command-line tools </p>
-      
-      <p><br /> <strong>2. Exprimental</strong></p>
-      </p>● Handling of laboratory equipment and instrument</p>
-      </p>● Viability staining and basic microscopy techniques</p>
-      </p>● Flow cytometry (sample preparation, acquisition, and basic data interpretation)</p>
-      </p>● Cell culture (maintenance of cell lines, sterile techniques)</p>
-      </p>● PCR and gel electrophoresis</p>
-      </p>● Transformations</p>
-      </p>● Plasmid purification and quantification </p>
-      </p>● Transfections (Nucleofection)</p>
-      </p>● Preparation of buffers and laboratory solutions </p>
-        
 
+      <ul>
+        <li>Algorithm development: Implementation of custom algorithms for data processing, analysis, and interpretation of high-throughput biological data</li>
+        <li>Experimental data analysis: Experience using FlowJo for gating strategies and population identification and basic experience using SnapGene</li>
+        <li>Graph theory and network analysis: Graph theory applications for biological network analysis</li>
+        <li>Data analysis and visualization: Data analysis (e.g. NumPy or Pandas) and creation of informative and publication-ready images using tools such as Matplotlib and Seaborn</li>
+        <li>Reproducible research: Familiar with practices for version control (e.g. Git), reproducibility, and code documentation</li>
+        <li>Design & Engineering Software: Adobe InDesign, AutoCAD, Fusion</li>
+        <li>Operating Systems: Linux/Unix environments, command-line tools</li>
+      </ul>
 
+      <p><strong>2. Experimental</strong></p>
+      <ul>
+        <li>Handling of laboratory equipment and instruments</li>
+        <li>Viability staining and basic microscopy techniques</li>
+        <li>Flow cytometry (sample preparation, acquisition, and basic data interpretation)</li>
+        <li>Cell culture (maintenance of cell lines, sterile techniques)</li>
+        <li>PCR and gel electrophoresis</li>
+        <li>Transformations</li>
+        <li>Plasmid purification and quantification</li>
+        <li>Transfections (Nucleofection)</li>
+        <li>Preparation of buffers and laboratory solutions</li>
+      </ul>
     </div>
   </section>
 
