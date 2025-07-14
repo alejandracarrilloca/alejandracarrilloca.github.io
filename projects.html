@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <title>Projects - Alejandra Carrillo-Carlos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,17 +14,37 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       background: #ffffff;
       color: #000000;
       line-height: 1.6;
       font-size: 1.15rem;
     }
 
+    a {
+      color: #59a3d4;
+      text-decoration: underline;
+    }
+
+    .contact-info a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
     nav#nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      z-index: 100;
       padding: 1rem 2rem;
       border-bottom: 1px solid #ccc;
-      margin-left: 8rem;/* Movido un poco a la derecha */
+      margin-left: 8rem;
       margin-right: 8rem;
     }
 
@@ -50,17 +70,18 @@
     #top {
       display: flex;
       gap: 4rem;
-      align-items: flex-start;
-      margin: 3rem 3rem;
+      margin: 3rem 10rem;
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin-left: 10rem; /* Movido un poco a la derecha */
-      margin-right: 10rem; 
     }
 
     .profile {
-      flex: 0 0 230px;
+      position: fixed;
+      top: 10rem;
+      left: 6rem;
+      width: 230px;
       text-align: left;
+      z-index: 10;
     }
 
     .profile img {
@@ -69,17 +90,16 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
-      border: 3px solid #ccc;
     }
 
     .profile h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 0.3rem;
     }
 
     .profile p {
-      font-size: 1.0rem;
+      font-size: 1.2rem;
       margin-bottom: 0.4rem;
     }
 
@@ -91,7 +111,7 @@
 
     .contact-info li {
       margin-bottom: 0.5rem;
-      font-size: 0.80rem;
+      font-size: 1rem;
     }
 
     .contact-info li i {
@@ -101,27 +121,28 @@
       color: #333;
     }
 
-    .contact-info a {
-      color: #000;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
     .text {
       flex: 1;
       min-width: 300px;
       max-width: 900px;
       text-align: justify;
+      margin-left: 260px;
     }
 
     .text header h1 {
       font-size: 1.4rem;
+      margin-top: 2rem;
       margin-bottom: 1rem;
       border-bottom: 2px solid #000;
       padding-bottom: 0.3rem;
+    }
+
+    .text h2 {
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #000;
+      padding-bottom: 0.2rem;
     }
 
     .text p {
@@ -132,16 +153,17 @@
       #top {
         flex-direction: column;
         margin: 2rem;
-        margin-left: 0; /* Para pantallas pequeñas no mover */
+        margin-left: 0;
       }
 
       .profile {
+        position: static;
         width: 100%;
         margin-bottom: 2rem;
       }
 
-      .profile img {
-        margin-bottom: 1rem;
+      .text {
+        margin-left: 0;
       }
     }
   </style>
@@ -154,7 +176,7 @@
       <li><a href="Cv.html">CV</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
-      <li><a href="talks.html">Talks</a></li>   
+      <li><a href="talks.html">Talks</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
     </ul>
   </nav>
@@ -166,9 +188,9 @@
       <p><strong>Genomic Sciences undergraduate student</strong></p>
       <ul class="contact-info">
         <li><i class="fas fa-location-dot"></i>Cuernavaca, Mor., México</li>
-        <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com"> Email</a></li>
-        <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank"> GitHub</a></li>
-        <li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank"> ORCID</a></li>
+        <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com">Email</a></li>
+        <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank">GitHub</a></li>
+        <li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank">ORCID</a></li>
       </ul>
     </aside>
 
@@ -176,7 +198,25 @@
       <header>
         <h1>Projects</h1>
       </header>
-      </div>
+
+      <!-- Aquí puedes insertar tus proyectos -->
+      <h2>SPN-205: A NMD-targeted Isoform of CD43</h2>
+      <p>This project explores the differential expression and functional implications of the SPN-205 transcript, a nonsense-mediated decay isoform of CD43, in hematologic malignancies using RNA-Seq data, bioinformatics pipelines, and functional enrichment.</p>
+
+      <h2>TFBS Mapping in E. coli ChIP-Seq Data</h2>
+      <p>Development of a modular Python pipeline to identify transcription factor binding sites (TFBS) in *E. coli* based on peak calls and genomic sequence analysis, including sequence extraction, FASTA generation, and visualization.</p>
+
+
+      <h2>Project:  “Exploring the role of SPN-205: an nonsense-mediated decay targeted CD43 isoform in cancer” </h2>
+      <p>- Computational analysis of TCGA and GTEx data to evaluate the expression of SPN-205, a predicted NMD-sensitive isoform of SPN. 
+       -  We found SPN-205 overexpressed in multiple tumor types, suggesting a potential functional role beyond transcriptional noise.
+     -  Ongoing work includes functional correlation with immune evasion, proliferation, and apoptosis resistance signatures.</p>C
+
+        
+       <h2> Proyect: “Targeted Disruption of CD43 Using CRISPR-Cas9 Genome Editing”</h2>
+      <P>This experimental project aims to silence the SPN gene (CD43) using CRISPR-Cas9 genome editing to assess its impact on immune cell function and its implication in cancer. </P>
+
+    </div>
   </section>
 
 </body>
