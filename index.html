@@ -8,234 +8,247 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <style>
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-font-family: 'Montserrat', sans-serif;
-background: #ffffff;
-color: #000000;
-line-height: 1.6;
-font-size: 1.15rem;
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+  font-size: 1.15rem;
 }
 
 a {
-color: #59a3d4;
-text-decoration: underline;
+  color: #59a3d4;
+  text-decoration: underline;
 }
 
 .contact-info a {
-color: #000;
-text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .contact-info a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
+/* === NAVIGATION === */
 nav#nav {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-background-color: white;
-z-index: 100;
-padding: 1rem 2rem;
-border-bottom: 1px solid #ccc;
-margin-left: 8rem;
-margin-right: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
 }
 
 nav#nav ul {
-list-style: none;
-display: flex;
-gap: 6rem;
+  display: flex;
+  justify-content: space-between; /* name left, menu right */
+  align-items: center;
+  list-style: none;
 }
 
-nav#nav ul li a {
-color: #000;
-text-decoration: none;
-font-weight: 600;
-padding-bottom: 0.3rem;
-border-bottom: 2px solid transparent;
-transition: border-color 0.2s ease-in-out;
+nav#nav .logo a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
 }
 
-nav#nav ul li a:hover {
-border-color: #000;
+nav#nav .menu {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 0.9rem; /* smaller menu */
 }
 
+nav#nav .menu a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+}
+
+nav#nav .menu a:hover {
+  border-color: #000;
+}
+
+/* === TOP SECTION === */
 #top {
-display: flex;
-gap: 4rem;
-margin: 3rem 10rem;
-flex-wrap: wrap;
-justify-content: 
-flex-start;
+  display: flex;
+  gap: 4rem;
+  margin: 3rem 10rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .profile {
-position: fixed;
-top: 10rem;
-left: 6rem;
-width: 270px;
-text-align: left;
-z-index: 10;
+  position: fixed;
+  top: 10rem;
+  left: 6rem;
+  width: 270px;
+  text-align: left;
+  z-index: 10;
 }
 
 .profile img {
-width: 210px;
-height: 210px;
-border-radius: 50%;
-object-fit: cover;
-margin-bottom: 1rem;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .profile h2 {
-font-size: 1.3rem;
-font-weight: 700;
-margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
 }
 
 .profile p {
-font-size: 1.2rem;
-margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
 }
 
 .contact-info {
-list-style: none;
-padding: 0;
-margin-top: 0.8rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 0.8rem;
 }
 
 .contact-info li {
-margin-bottom: 0.5rem;
-font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .contact-info li i {
-width: 20px;
-text-align: center;
-margin-right: 8px;
-color: #333;
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+  color: #333;
 }
 
 .text {
-flex: 1;
-min-width: 300px;
-max-width: 900px;
-text-align: justify;
-margin-left: 260px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 900px;
+  text-align: justify;
+  margin-left: 260px;
 }
 
 .text header h1 {
-font-size: 1.4rem;
-margin-top:2rem; 
-margin-bottom: 1rem;
-border-bottom: 2px solid #000;
-padding-bottom: 0.3rem;
+  font-size: 1.4rem;
+  margin-top:2rem; 
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.3rem;
 }
 
 .text h2 {
-font-size: 1.4rem;
-margin-top: 1.5rem;
-margin-bottom: 0.5rem;
-border-bottom: 1px solid #000;
-padding-bottom: 0.2rem;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.2rem;
 }
 .text h3 {
-font-size: 1.4rem;
-margin-top: 1.5rem;
-margin-bottom: 0.5rem;
-border-bottom: 1px solid #000;
-padding-bottom: 0.2rem;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.2rem;
 }
 .text p {
-margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 @media (max-width: 700px) {
-#top {
-flex-direction: column;
-margin: 2rem;
-margin-left: 0;
-}
+  #top {
+    flex-direction: column;
+    margin: 2rem;
+    margin-left: 0;
+  }
 
-.profile {
-position: static;
-width: 100%;
-margin-bottom: 2rem;
-}
+  .profile {
+    position: static;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 
-.text {
-margin-left: 0;
-}
+  .text {
+    margin-left: 0;
+  }
 }
 </style>
 </head>
 <body>
 
 <nav id="nav">
-<ul>
-<li><a href="index.html">Alejandra Carrillo</a></li>
-<li><a href="Cv.html">CV</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="publications.html">Publications</a></li>
-<li><a href="talks.html">Talks</a></li>   
-<li><a href="portfolio.html">Portfolio</a></li>
-</ul>
+  <ul>
+    <li class="logo"><a href="index.html">Alejandra Carrillo</a></li>
+    <div class="menu">
+      <li><a href="Cv.html">CV</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </div>
+  </ul>
 </nav>
 
 <section id="top">
-<aside class="profile">
-<img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo" />
-<h2>Dulce Alejandra Carrillo-Carlos</h2>
-<p><strong> Genomic Sciences undergraduate student</strong></p>
-<ul class="contact-info">
-<li><i class="fas fa-location-dot"></i>Cuernavaca, Morelos, México</li>
-<li><i class="fas fa-envelope"></i> <a href="mailto:alecarrillocarlos@gmail.com" target="_blank">alecarrillocarlos@gmail.com</a></li>
-<li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank">GitHub</a></li>
-<li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank">ORCID</a></li>
-</ul>
-</aside>
+  <aside class="profile">
+    <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo" />
+    <h2>Dulce Alejandra Carrillo-Carlos</h2>
+    <p><strong> Genomic Sciences undergraduate student</strong></p>
+    <ul class="contact-info">
+      <li><i class="fas fa-location-dot"></i>Cuernavaca, Morelos, México</li>
+      <li><i class="fas fa-envelope"></i> <a href="mailto:alecarrillocarlos@gmail.com" target="_blank">alecarrillocarlos@gmail.com</a></li>
+      <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank">GitHub</a></li>
+      <li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank">ORCID</a></li>
+    </ul>
+  </aside>
 
-<div class="text">
-<header>
-<h1><strong>About Me</strong></h1>
-</header>
-<p>I am a <a href="https://www.ccg.unam.mx/en/" target="_blank">Genomic Sciences</a> undergraduate student at the <a href="https://www.unam.mx/" target="_blank">National Autonomous University of Mexico (UNAM)</a> with a strong interest 
-in immunology, neurology, and cancer. My academic and research focus lies in understanding the genomic and molecular mechanisms 
-that regulate immune responses. I am particularly interested in how computational biology and systems biology can be applied to 
-identify key immune-related genes, cellular interactions, and signaling pathways that influence tumor progression.</p>
+  <div class="text">
+    <header>
+      <h1><strong>About Me</strong></h1>
+    </header>
+    <p>I am a <a href="https://www.ccg.unam.mx/en/" target="_blank">Genomic Sciences</a> undergraduate student at the <a href="https://www.unam.mx/" target="_blank">National Autonomous University of Mexico (UNAM)</a> with a strong interest 
+    in immunology, neurology, and cancer. My academic and research focus lies in understanding the genomic and molecular mechanisms 
+    that regulate immune responses. I am particularly interested in how computational biology and systems biology can be applied to 
+    identify key immune-related genes, cellular interactions, and signaling pathways that influence tumor progression.</p>
 
-<h2><strong>Education</strong></h2>
-<p>
-  <strong>National Autonomous University of Mexico (UNAM), Morelos, Mexico</strong><br>
-  <span style="color: darkgray;">B.S. in Genomic Sciences | 2024–Present</span>
-</p>
+    <h2><strong>Education</strong></h2>
+    <p>
+      <strong>National Autonomous University of Mexico (UNAM), Morelos, Mexico</strong><br>
+      <span style="color: darkgray;">B.S. in Genomic Sciences | 2024–Present</span>
+    </p>
 
-<p>
-  <strong>Preparatoria Anáhuac, México</strong><br>
-  <span style="color: darkgray;">High School | 2021–2024</span>
-</p>
+    <p>
+      <strong>Preparatoria Anáhuac, México</strong><br>
+      <span style="color: darkgray;">High School | 2021–2024</span>
+    </p>
 
-<h2><strong>Research Experience</strong></h2>
-<p style="color: gray;"> 📍on-site | 💻 remote   </p>
-<p><strong>Institute of Biotechnology, UNAM | <a href="https://www.ibt.unam.mx/perfil/3283/dra-yvonne-jane-rosenstein-azoulay" target="_blank">Laboratory of Dr. Yvonne Jane Rosenstein Azoulay</a></strong> <br /> 
-Undergraduate researcher | 📍🇲🇽  Dec 2024 – Present</p> 
+    <h2><strong>Research Experience</strong></h2>
+    <p style="color: gray;"> 📍on-site | 💻 remote   </p>
+    <p><strong>Institute of Biotechnology, UNAM | <a href="https://www.ibt.unam.mx/perfil/3283/dra-yvonne-jane-rosenstein-azoulay" target="_blank">Laboratory of Dr. Yvonne Jane Rosenstein Azoulay</a></strong> <br /> 
+    Undergraduate researcher | 📍🇲🇽  Dec 2024 – Present</p> 
 
-<p><strong>Center for Genomic Sciences, UNAM | <a href="http://freyrelab.org/en/" target="_blank">Laboratory of Dr. Julio A. Freyre-Gonzalez</a></strong> <br />
-Trainee | 📍🇲🇽  Dec 2024 – May 2025</p>
+    <p><strong>Center for Genomic Sciences, UNAM | <a href="http://freyrelab.org/en/" target="_blank">Laboratory of Dr. Julio A. Freyre-Gonzalez</a></strong> <br />
+    Trainee | 📍🇲🇽  Dec 2024 – May 2025</p>
 
-<h2><strong> Beyond the lab </strong></h2>
-<p>
-I’m an avid swimmer 🏊‍♀️ and I also enjoy running 🏃‍♀️ from time to time, especially when I need a mental break or some fresh air 🌿. In quieter moments, I love embroidery and sewing 🧵. But above all, my favorite thing in the world is traveling ✈️🌍. I love discovering new places 🗺️, learning about different cultures 🥘, and seeing the world from new perspectives. Whether it’s a quick weekend trip or a longer journey, travel always leaves me inspired and more connected to the world around me.
-</p>
-
-
-</div>
+    <h2><strong> Beyond the lab </strong></h2>
+    <p>
+    I’m an avid swimmer 🏊‍♀️ and I also enjoy running 🏃‍♀️ from time to time, especially when I need a mental break or some fresh air 🌿. In quieter moments, I love embroidery and sewing 🧵. But above all, my favorite thing in the world is traveling ✈️🌍. I love discovering new places 🗺️, learning about different cultures 🥘, and seeing the world from new perspectives. Whether it’s a quick weekend trip or a longer journey, travel always leaves me inspired and more connected to the world around me.
+    </p>
+  </div>
 </section>
 
 </body>
