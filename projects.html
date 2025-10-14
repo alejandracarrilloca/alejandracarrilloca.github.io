@@ -1,228 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Projects - Alejandra Carrillo-Carlos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="utf-8" />
+<title>Projects - Alejandra Carrillo-Carlos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #ffffff;
-      color: #000000;
-      line-height: 1.6;
-      font-size: 1.15rem;
-    }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+  font-size: 1.15rem;
+}
 
-    a {
-      color: #59a3d4;
-      text-decoration: underline;
-    }
+a {
+  color: #59a3d4;
+  text-decoration: underline;
+}
 
-    .contact-info a {
-      color: #000;
-      text-decoration: none;
-    }
+.contact-info a {
+  color: #000;
+  text-decoration: none;
+}
 
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
+.contact-info a:hover {
+  text-decoration: underline;
+}
 
-    nav#nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: white;
-      z-index: 100;
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #ccc;
-      margin-left: 8rem;
-      margin-right: 8rem;
-    }
+nav#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
 
-    nav#nav ul {
-      list-style: none;
-      display: flex;
-      gap: 6rem;
-    }
+nav#nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
 
-    nav#nav ul li a {
-      color: #000;
-      text-decoration: none;
-      font-weight: 600;
-      padding-bottom: 0.3rem;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s ease-in-out;
-    }
+nav#nav .logo a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
 
-    nav#nav ul li a:hover {
-      border-color: #000;
-    }
+nav#nav .menu {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 1.2rem;
+}
 
-    #top {
-      display: flex;
-      gap: 4rem;
-      margin: 3rem 10rem;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
+nav#nav .menu a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
 
-    .profile {
-      position: fixed;
-      top: 10rem;
-      left: 6rem;
-      width: 270px;
-      text-align: left;
-      z-index: 10;
-    }
+nav#nav .menu a:hover {
+  color: #F5277D;
+  transform: scale(1.05);
+  border-bottom: 2px solid #F5277D;
+}
 
-    .profile img {
-      width: 210px;
-      height: 210px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
+#top {
+  display: flex;
+  gap: 4rem;
+  margin: 3rem 10rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
-    .profile h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
+.profile {
+  position: fixed;
+  top: 10rem;
+  left: 6rem;
+  width: 270px;
+  text-align: left;
+  z-index: 10;
+}
 
-    .profile p {
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
-    }
+.profile img {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
 
-    .contact-info {
-      list-style: none;
-      padding: 0;
-      margin-top: 0.8rem;
-    }
+.profile h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
 
-    .contact-info li {
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-    }
+.profile p {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
 
-    .contact-info li i {
-      width: 20px;
-      text-align: center;
-      margin-right: 8px;
-      color: #333;
-    }
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.8rem;
+}
 
-    .text {
-      flex: 1;
-      min-width: 300px;
-      max-width: 900px;
-      text-align: justify;
-      margin-left: 260px;
-    }
+.contact-info li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
 
-    .text header h1 {
-      font-size: 1.4rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #000;
-      padding-bottom: 0.3rem;
-    }
+.contact-info li i {
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+  color: #333;
+}
 
-    .text h2 {
-      font-size: 1.4rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #000;
-      padding-bottom: 0.2rem;
-    }
+.text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 900px;
+  text-align: justify;
+  margin-left: 260px;
+}
 
-    .text p {
-      margin-bottom: 1.2rem;
-    }
+.text header h1 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.3rem;
+}
 
-    @media (max-width: 700px) {
-      #top {
-        flex-direction: column;
-        margin: 2rem;
-        margin-left: 0;
-      }
+.text h2 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.2rem;
+}
 
-      .profile {
-        position: static;
-        width: 100%;
-        margin-bottom: 2rem;
-      }
+.text p {
+  margin-bottom: 1.2rem;
+}
 
-      .text {
-        margin-left: 0;
-      }
-    }
-  </style>
+@media (max-width: 700px) {
+  #top {
+    flex-direction: column;
+    margin: 2rem;
+    margin-left: 0;
+  }
+
+  .profile {
+    position: static;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .text {
+    margin-left: 0;
+  }
+}
+</style>
 </head>
 <body>
 
-  <nav id="nav">
-    <ul>
-      <li><a href="index.html">Alejandra Carrillo</a></li>
+<nav id="nav">
+  <ul>
+    <li class="logo"><a href="index.html">Alejandra Carrillo</a></li>
+    <div class="menu">
       <li><a href="Cv.html">CV</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="talks.html">Talks</a></li>
       <li><a href="portfolio.html">Gallery</a></li>
+    </div>
+  </ul>
+</nav>
+
+<section id="top">
+  <aside class="profile">
+    <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
+    <h2>Dulce Alejandra Carrillo-Carlos</h2>
+    <p><strong>Genomic Sciences undergraduate student</strong></p>
+    <ul class="contact-info">
+      <li><i class="fas fa-location-dot"></i>Cuernavaca, Morelos, México</li>
+      <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com">alecarrillocarlos@gmail.com</a></li>
+      <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank">GitHub</a></li>
+      <li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank">ORCID</a></li>
     </ul>
-  </nav>
+  </aside>
 
-  <section id="top">
-    <aside class="profile">
-      <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
-      <h2>Dulce Alejandra Carrillo-Carlos</h2>
-      <p><strong>Genomic Sciences undergraduate student</strong></p>
-      <ul class="contact-info">
-        <li><i class="fas fa-location-dot"></i>Cuernavaca, Morelos, México</li>
-        <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com">alecarrillocarlos@gmail.com</a></li>
-        <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank">GitHub</a></li>
-        <li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank">ORCID</a></li>
-      </ul>
-    </aside>
+  <div class="text">
+    <header>
+      <h1>Projects</h1>
+    </header>
 
-    <div class="text">
-      <header>
-        <h1>Projects</h1>
-      </header>
-
-      <h2>“Exploring the role of SPN-205: an nonsense-mediated decay targeted CD43 isoform in cancer” </h2>
-      <p>Dulce Alejandra Carrillo Carlos¹, Luis Eduardo Chipres Naranjo¹, Yvonne Jane Rosenstein Azoulay¹ <br>
-        ¹Institute of biotechnology, National Autonomous University of Mexico  </p>
-       <p><Strong>Status: </strong>2025 - Ongoing  </p>
-      <p> Transcript isoform characterization and construction of detailed transcript maps for all SPN isoforms, identifying non-coding and NMD-targeted variants. </p>
-      <p>Computational analysis of TCGA and GTEx data to evaluate the expression of SPN-205, a predicted NMD targeted isoform of SPN. 
+    <h2>“Exploring the role of SPN-205: an nonsense-mediated decay targeted CD43 isoform in cancer”</h2>
+    <p>Dulce Alejandra Carrillo Carlos¹, Luis Eduardo Chipres Naranjo¹, Yvonne Jane Rosenstein Azoulay¹ <br>
+      ¹Institute of Biotechnology, National Autonomous University of Mexico</p>
+    <p><strong>Status:</strong> 2025 - Ongoing</p>
+    <p>Transcript isoform characterization and construction of detailed transcript maps for all SPN isoforms, identifying non-coding and NMD-targeted variants.</p>
+    <p>Computational analysis of TCGA and GTEx data to evaluate the expression of SPN-205, a predicted NMD targeted isoform of SPN. 
        We found SPN-205 overexpressed in multiple tumor types, suggesting a potential functional role beyond transcriptional noise.
        Our ongoing work includes functional analysis to assess the correlation between the expression of
         SPN and SPN-205 with gene expression signatures associated with cell proliferation, immune evasion, and apoptosis resistance.</p>
-        <p>
+    <p>
       <a href="/Exploring the role of SPN-205_ an nonsense-mediated decay targeted CD43 isoform (1).pdf" target="_blank">Project summary</a><br>
       <a href="https://github.com/alejandracarrilloca/SPN-205" target="_blank">Github repository</a>
+    </p>
 
-      </p>
+    <h2>“Targeted Disruption of CD43 Using CRISPR-Cas9 Genome Editing”</h2>
+    <p>Dulce Alejandra Carrillo Carlos¹, Luis Eduardo Chipres Naranjo¹, Yvonne Jane Rosenstein Azoulay¹ <br>
+      ¹Institute of Biotechnology, National Autonomous University of Mexico</p>
+    <p><strong>Status:</strong> 2024 - Ongoing</p>
+    <p>This project employs CRISPR-Cas9 genome editing to specifically disrupt the SPN gene, responsible for producing the CD43 protein found on immune cells. By generating CD43 knockout cell lines, we aim to investigate how the absence of this protein impacts various immune cell functions, including their ability to respond to external signals and participate in immune regulation. 
+       Understanding the functional consequences of CD43 loss will provide insights into its role in immune system dynamics and its contribution to cancer progression, particularly in hematological malignancies.</p>
 
-       <h2> “Targeted Disruption of CD43 Using CRISPR-Cas9 Genome Editing”</h2>
-      <p>Dulce Alejandra Carrillo Carlos¹, Luis Eduardo Chipres Naranjo¹, Yvonne Jane Rosenstein Azoulay¹ <br>
-        ¹Institute of biotechnology, National Autonomous University of Mexico </p>
-         <p><Strong>Status: </strong>2024 - Ongoing  </p>
-      <p>This project employs CRISPR-Cas9 genome editing to specifically disrupt the SPN gene, responsible for producing the CD43 protein found on immune cells. By generating CD43 knockout cell lines, we aim to investigate how the absence of this protein impacts various immune cell functions, including their ability to respond to external signals and participate in immune regulation. 
-        Understanding the functional consequences of CD43 loss will provide insights into its role in immune system dynamics and its contribution to cancer progression, particularly in hematological malignancies.</p>
-
-    </div>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>
