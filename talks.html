@@ -35,6 +35,7 @@
       text-decoration: underline;
     }
 
+    /* --- NAVIGATION BAR --- */
     nav#nav {
       position: fixed;
       top: 0;
@@ -42,7 +43,7 @@
       right: 0;
       background-color: white;
       z-index: 100;
-      padding: 1rem 2rem;
+      padding: 1.2rem 2rem;
       border-bottom: 1px solid #ccc;
       margin-left: 8rem;
       margin-right: 8rem;
@@ -51,7 +52,10 @@
     nav#nav ul {
       list-style: none;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       gap: 6rem;
+      flex-wrap: wrap;
     }
 
     nav#nav ul li a {
@@ -67,10 +71,11 @@
       border-color: #000;
     }
 
+    /* --- PAGE STRUCTURE --- */
     #top {
       display: flex;
       gap: 4rem;
-      margin: 3rem 10rem;
+      margin: 5rem 10rem 3rem 10rem;
       flex-wrap: wrap;
       justify-content: flex-start;
     }
@@ -141,11 +146,22 @@
       margin-bottom: 1.2rem;
     }
 
+    /* --- RESPONSIVE --- */
     @media (max-width: 700px) {
+      nav#nav {
+        margin: 0;
+        padding: 1rem;
+      }
+
+      nav#nav ul {
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
       #top {
         flex-direction: column;
-        margin: 2rem;
-        margin-left: 0;
+        margin: 6rem 2rem 2rem 2rem;
       }
 
       .profile {
@@ -168,7 +184,7 @@
       <li><a href="Cv.html">CV</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
-      <li><a href="talks.html">Talks</a></li>   
+      <li><a href="talks.html">Talks</a></li>
       <li><a href="portfolio.html">Gallery</a></li>
     </ul>
   </nav>
@@ -191,12 +207,11 @@
         <h1>Talks and Presentations</h1>
       </header>
 
-    <p><strong>Oral Presentations</strong></p>
-    <p>
-      <strong>"Exploring the role of SPN-205: a nonsense-mediated decay targeted CD43 isoform"</strong><br>
-      <em>XXVI SMI National Congress 2025 — Chihuahua, Mexico</em>
-    </p>
-       
+      <p><strong>Oral Presentations</strong></p>
+      <p>
+        <strong>"Exploring the role of SPN-205: a nonsense-mediated decay targeted CD43 isoform"</strong><br>
+        <em>XXVI SMI National Congress 2025 — Chihuahua, Mexico</em>
+      </p>
     </div>
   </section>
 
