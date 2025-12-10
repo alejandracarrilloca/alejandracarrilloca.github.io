@@ -1,218 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Talks - Alejandra Carrillo-Carlos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+<title>Talks - Alejandra Carrillo-Carlos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #ffffff;
-      color: #000000;
-      line-height: 1.6;
-      font-size: 1.15rem;
-    }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+  font-size: 1.15rem;
+}
 
-    a {
-      color: #59a3d4;
-      text-decoration: underline;
-    }
+a {
+  color: #59a3d4;
+  text-decoration: underline;
+}
 
-    .contact-info a {
-      color: #000;
-      text-decoration: none;
-    }
+.contact-info a {
+  color: #000;
+  text-decoration: none;
+}
 
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
+.contact-info a:hover {
+  text-decoration: underline;
+}
 
-    /* --- NAVIGATION BAR --- */
-    nav#nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: white;
-      z-index: 100;
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #ccc;
-      margin-left: 8rem;
-      margin-right: 8rem;
-    }
 
-    nav#nav ul {
-      list-style: none;
-      display: flex;
-      gap: 6rem;
-    }
+/* --- NAVIGATION BAR --- */
+nav#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
 
-    nav#nav ul li a {
-      color: #000;
-      text-decoration: none;
-      font-weight: 600;
-      padding-bottom: 0.3rem;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s ease-in-out;
-    }
+nav#nav ul {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  list-style: none;
+}
 
-    nav#nav ul li a:hover {
-      border-color: #000;
-    }
+nav#nav .logo a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
 
-    /* --- PAGE STRUCTURE --- */
-    #top {
-      display: flex;
-      gap: 4rem;
-      margin: 3rem 10rem;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
+nav#nav .menu {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 1.2rem;
+}
 
-    .profile {
-      position: fixed;
-      top: 10rem;
-      left: 6rem;
-      width: 270px;
-      text-align: left;
-      z-index: 10;
-    }
+nav#nav .menu a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+}
 
-    .profile img {
-      width: 210px;
-      height: 210px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
+nav#nav .menu a:hover {
+  color: #F5277D;  
+  transform: scale(1.05); 
+  border-bottom: 2px solid #F5277D; 
+}
 
-    .profile h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
 
-    .profile p {
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
-    }
+/* --- PAGE STRUCTURE --- */
+#top {
+  display: flex;
+  gap: 4rem;
+  margin: 3rem 10rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
-    .contact-info {
-      list-style: none;
-      padding: 0;
-      margin-top: 0.8rem;
-    }
+.profile {
+  position: fixed;
+  top: 10rem;
+  left: 6rem;
+  width: 270px;
+  text-align: left;
+  z-index: 10;
+}
 
-    .contact-info li {
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-    }
+.profile img {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
 
-    .contact-info li i {
-      width: 20px;
-      text-align: center;
-      margin-right: 8px;
-      color: #333;
-    }
+.profile h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
 
-    .text {
-      flex: 1;
-      min-width: 300px;
-      max-width: 900px;
-      text-align: justify;
-      margin-left: 260px;
-    }
+.profile p {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
 
-    .text header h1 {
-      font-size: 1.4rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #000;
-      padding-bottom: 0.3rem;
-    }
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.8rem;
+}
 
-    .text p {
-      margin-bottom: 1.2rem;
-    }
+.contact-info li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
 
-    /* --- Responsive --- */
-    @media (max-width: 700px) {
-      nav#nav {
-        margin: 0;
-        padding: 1rem;
-      }
+.contact-info li i {
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+  color: #333;
+}
 
-      nav#nav ul {
-        gap: 2rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
+.text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 900px;
+  text-align: justify;
+  margin-left: 260px;
+}
 
-      #top {
-        flex-direction: column;
-        margin: 6rem 2rem 2rem 2rem;
-      }
+.text header h1 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.3rem;
+}
 
-      .profile {
-        position: static;
-        width: 100%;
-        margin-bottom: 2rem;
-      }
+.text h2 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.2rem;
+}
 
-      .text {
-        margin-left: 0;
-      }
-    }
-  </style>
+.text p {
+  margin-bottom: 1.2rem;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 700px) {
+  #top {
+    flex-direction: column;
+    margin: 2rem;
+    margin-left: 0;
+  }
+
+  .profile {
+    position: static;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .text {
+    margin-left: 0;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <nav id="nav">
-    <ul>
-      <li><a href="index.html">Alejandra Carrillo</a></li>
+<nav id="nav">
+  <ul>
+    <li class="logo"><a href="index.html">Alejandra Carrillo</a></li>
+    <div class="menu">
       <li><a href="Cv.html">CV</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="talks.html">Talks</a></li>
       <li><a href="portfolio.html">Gallery</a></li>
-    </ul>
-  </nav>
-
-  <section id="top">
-    <aside class="profile">
-      <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
-      <h2>Dulce Alejandra Carrillo-Carlos</h2>
-      <p><strong>Genomic Sciences undergraduate student</strong></p>
-      <ul class="contact-info">
-        <li><i class="fas fa-location-dot"></i>Cuernavaca, Morelos, México</li>
-        <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com">alecarrillocarlos@gmail.com</a></li>
-        <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank">GitHub</a></li>
-        <li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank">ORCID</a></li>
-      </ul>
-    </aside>
-
-    <div class="text">
-      <header>
-        <h1>Talks and Presentations</h1>
-      </header>
-
-      <p><strong>Oral Presentations</strong></p>
-      <p>
-        <strong>“Exploring the role of SPN-205: a nonsense-mediated decay targeted CD43 isoform”</strong><br>
-        <em>XXVI Mexican Immunology Society National Congress, Chihuahua, 2025</em>
-      </p>
     </div>
-  </section>
+  </ul>
+</nav>
+
+<section id="top">
+
+  <aside class="profile">
+    <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
+    <h2>Dulce Alejandra Carrillo-Carlos</h2>
+    <p><strong>Genomic Sciences undergraduate student</strong></p>
+    <ul class="contact-info">
+      <li><i class="fas fa-location-dot"></i>Cuernavaca, Morelos, México</li>
+      <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com">alecarrillocarlos@gmail.com</a></li>
+      <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank">GitHub</a></li>
+      <li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank">ORCID</a></li>
+    </ul>
+  </aside>
+
+  <div class="text">
+    <header>
+      <h1><strong>Talks and Presentations</strong></h1>
+    </header>
+
+    <h2><strong>Oral Presentations</strong></h2>
+
+    <p>
+      <strong>“Exploring the role of SPN-205: a nonsense-mediated decay targeted CD43 isoform”</strong><br>
+      <em>XXVI Mexican Immunology Society National Congress, Chihuahua, 2025</em>
+    </p>
+
+  </div>
+
+</section>
 
 </body>
 </html>
