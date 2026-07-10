@@ -4,9 +4,21 @@
 <meta charset="utf-8" />
 <title>Gallery - Alejandra Carrillo-Carlos</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+
 <style>
+
 * {
   margin: 0;
   padding: 0;
@@ -26,193 +38,263 @@ a {
   text-decoration: underline;
 }
 
-.contact-info a {
-  color: #000;
-  text-decoration: none;
-}
+/* ---------------- NAVBAR ---------------- */
 
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-/* --- NAVIGATION --- */
 nav#nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: white;
+  background: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
   z-index: 100;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #ccc;
 }
 
 nav#nav ul {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
 
-nav#nav .logo a {
+.logo a {
+  color: #000000;
+  text-decoration: none;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #000;
-  text-decoration: none;
 }
 
-nav#nav .menu {
+.menu {
   display: flex;
   gap: 2.5rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
-nav#nav .menu a {
-  color: #000;
+.menu a {
+  color: #000000;
   text-decoration: none;
   font-weight: 600;
-  padding-bottom: 0.3rem;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease-in-out;
-}
-nav#nav .menu a:hover {
-  color: #F5277D;  
-  transform: scale(1.05); 
-  border-bottom: 2px solid #F5277D; 
+  padding-bottom: 0.25rem;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
-/* --- STRUCTURE --- */
+.menu a:hover {
+  color: #F5277D;
+  border-color: #F5277D;
+}
+
+/* ---------------- PAGE LAYOUT ---------------- */
+
 #top {
   display: flex;
   gap: 4rem;
   margin: 3rem 10rem;
   flex-wrap: wrap;
-  justify-content: flex-start;
 }
+
+/* ---------------- PROFILE ---------------- */
 
 .profile {
   position: fixed;
-  top: 10rem;
+  top: 9rem;
   left: 6rem;
-  width: 270px;
-  text-align: left;
+  width: 285px;
+  text-align: center;
   z-index: 10;
 }
 
 .profile img {
-  width: 210px;
-  height: 210px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
 .profile h2 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
 }
 
 .profile p {
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #666666;
 }
 
-.contact-info {
-  list-style: none;
-  padding: 0;
-  margin-top: 0.8rem;
+.profile hr {
+  width: 70%;
+  margin: 0.8rem auto 1rem;
+  border: none;
+  border-top: 1px solid #e3e3e3;
 }
 
-.contact-info li {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
+/* ---------------- CONTACT BUTTONS ---------------- */
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
 }
 
-.contact-info li i {
-  width: 20px;
+.contact-card {
+  min-height: 42px;
+  padding: 0.55rem 0.7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid #d7d7d7;
+  border-radius: 11px;
+  background: #fafafa;
+
+  color: #444444;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.2;
   text-align: center;
-  margin-right: 8px;
-  color: #333;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
+
+.contact-card:hover {
+  background: #f1f1f1;
+  border-color: #999999;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card i {
+  color: #666666;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-card:hover i {
+  color: #000000;
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
 
 .text {
   flex: 1;
   min-width: 300px;
   max-width: 900px;
-  text-align: justify;
-  margin-left: 260px;
+  margin-left: 300px;
 }
 
-/* --- GALLERY --- */
-.gallery {
-  margin-top: 3rem;
-}
-
-.gallery h2 {
-  font-size: 1.4rem;
+.text header h1 {
+  font-size: 1.45rem;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #000000;
   padding-bottom: 0.3rem;
 }
 
-.gallery p {
+.gallery-intro {
+  color: #555555;
   margin-bottom: 1.5rem;
-  color: #333;
 }
+
+/* ---------------- GALLERY ---------------- */
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
 }
 
-.gallery-grid figure {
-  background: #f9f9f9;
-  border-radius: 12px;
+.gallery-card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.gallery-grid figure:hover {
+.gallery-card:hover {
   transform: translateY(-4px);
+  border-color: #c8c8c8;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
 }
 
-.gallery-grid img {
+.gallery-image {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+  background: #f4f4f4;
 }
 
-.gallery-grid img[src="congress1.jpg"] {
-  object-position: top;
+.gallery-image.congress {
+  object-position: center top;
 }
 
-.gallery-grid figcaption {
-  padding: 0.8rem;
-  font-size: 0.95rem;
-  color: #444;
-  text-align: center;
+.gallery-caption {
+  padding: 1rem 1.05rem 1.1rem;
 }
 
-.figcaption-text {
-  display: inline-block;
+.gallery-caption h2 {
+  font-size: 1rem;
+  line-height: 1.45;
+  margin-bottom: 0.45rem;
+  color: #222222;
 }
 
-.figcaption-date {
-  color: #888;
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
+.gallery-caption p {
+  font-size: 0.88rem;
+  color: #777777;
+  margin: 0;
 }
 
-/* --- RESPONSIVE --- */
+.gallery-caption i {
+  margin-right: 0.35rem;
+  color: #777777;
+}
+
+/* ---------------- MOBILE ---------------- */
+
 @media (max-width: 700px) {
+
+  nav#nav {
+    padding: 0.9rem 1rem;
+  }
+
+  nav#nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
   #top {
     flex-direction: column;
-    margin: 2rem;
-    margin-left: 0;
+    margin: 9.5rem 1.5rem 2rem;
   }
 
   .profile {
@@ -221,17 +303,45 @@ nav#nav .menu a:hover {
     margin-bottom: 2rem;
   }
 
+  .profile img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .contact-cards {
+    max-width: 320px;
+    margin: 1rem auto 0;
+  }
+
   .text {
     margin-left: 0;
   }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
+@media (max-width: 430px) {
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    max-width: 260px;
+  }
+}
+
 </style>
 </head>
+
 <body>
 
 <nav id="nav">
   <ul>
-    <li class="logo"><a href="index.html">Alejandra Carrillo</a></li>
+
+    <li class="logo">
+      <a href="index.html">Alejandra Carrillo</a>
+    </li>
+
     <div class="menu">
       <li><a href="Cv.html">CV</a></li>
       <li><a href="projects.html">Projects</a></li>
@@ -239,51 +349,153 @@ nav#nav .menu a:hover {
       <li><a href="talks.html">Talks</a></li>
       <li><a href="portfolio.html">Gallery</a></li>
     </div>
+
   </ul>
 </nav>
 
 <section id="top">
+
   <aside class="profile">
-    <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
+
+    <img
+      src="tu-foto.jpg"
+      alt="Portrait of Alejandra Carrillo-Carlos"
+    />
+
     <h2>Alejandra Carrillo-Carlos</h2>
-    <p><strong>Genomic Sciences undergraduate student</strong></p>
-    <ul class="contact-info">
-      <li><i class="fas fa-location-dot"></i>Cuernavaca, Morelos, México</li>
-      <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com">alecarrillocarlos@gmail.com</a></li>
-      <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank">GitHub</a></li>
-      <li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank">ORCID</a></li>
-    </ul>
+
+    <p>
+      <strong>B.S. Student in Genomic Sciences</strong>
+    </p>
+
+    <hr>
+
+    <div class="contact-cards">
+
+      <a
+        class="contact-card"
+        href="mailto:alecarrillocarlos@gmail.com"
+      >
+        <i class="fas fa-envelope"></i>
+        <span>Email</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="Cv.html"
+      >
+        <i class="fas fa-file-lines"></i>
+        <span>CV</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="https://github.com/alejandracarrilloca"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="https://scholar.google.com/citations?user=N4IRuzUAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fas fa-graduation-cap"></i>
+        <span>Scholar</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="https://www.linkedin.com/in/alejandracarrilloca/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="https://orcid.org/0009-0009-2252-3965"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-orcid"></i>
+        <span>ORCID</span>
+      </a>
+
+    </div>
+
   </aside>
 
-  <div class="text">
-    <section class="gallery">
-      <h2>Gallery</h2>
-      <p>A few moments from my academic journey, conferences, and research experiences.</p>
+  <main class="text">
 
-<div class="gallery-grid">
+    <header>
+      <h1>Gallery</h1>
+    </header>
 
-  <figure>
-    <img src="Stowers_summer_scholars.jpeg" alt="Stowers Summer Scholars Class of 2026">
-    <figcaption>
-      <span class="figcaption-text">Stowers Institute for Medical Research Summer Scholars Class of 2026</span>
-      <span class="figcaption-date">June 2026</span>
-    </figcaption>
-  </figure>
+    <p class="gallery-intro">
+      A few moments from my academic journey, conferences, and research experiences.
+    </p>
 
+    <div class="gallery-grid">
 
-  <figure>
-    <img src="congress1.jpg" alt="Mexican Immunology Congress 2025">
-    <figcaption>
-      <span class="figcaption-text">First poster at the Mexican Immunology Congress</span>
-      <span class="figcaption-date">October 2025</span>
-    </figcaption>
-  </figure>
+      <figure class="gallery-card">
 
+        <img
+          class="gallery-image"
+          src="Stowers_summer_scholars.jpeg"
+          alt="Stowers Institute Summer Scholars Class of 2026"
+          loading="lazy"
+        >
 
-</div>
-      
-    </section>
-  </div>
+        <figcaption class="gallery-caption">
+
+          <h2>
+            Stowers Institute for Medical Research Summer Scholars Class of 2026
+          </h2>
+
+          <p>
+            <i class="far fa-calendar"></i>
+            June 2026
+          </p>
+
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-card">
+
+        <img
+          class="gallery-image congress"
+          src="congress1.jpg"
+          alt="Poster presentation at the Mexican Immunology Congress"
+          loading="lazy"
+        >
+
+        <figcaption class="gallery-caption">
+
+          <h2>
+            First poster presentation at the Mexican Immunology Congress
+          </h2>
+
+          <p>
+            <i class="far fa-calendar"></i>
+            October 2025
+          </p>
+
+        </figcaption>
+
+      </figure>
+
+    </div>
+
+  </main>
+
 </section>
 
 </body>
