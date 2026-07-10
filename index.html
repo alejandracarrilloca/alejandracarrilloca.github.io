@@ -2,270 +2,711 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Alejandra Carrillo-Carlos</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Alejandra Carrillo-Carlos</title>
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+
+<meta
+  name="description"
+  content="Alejandra Carrillo-Carlos is a Genomic Sciences undergraduate student interested in immunology, computational biology, cancer biology, and gene regulation."
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================================================
+   GENERAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family:'Montserrat',sans-serif;
-    background:#fff;
-    color:#000;
-    line-height:1.6;
-    font-size:1.15rem;
+html {
+  scroll-behavior: smooth;
 }
 
-a{
-    color:#59a3d4;
-    text-decoration:underline;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #171717;
+  line-height: 1.65;
+  font-size: 1rem;
 }
 
-/* ---------------- NAVBAR ---------------- */
-
-nav#nav{
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    background:#fff;
-    border-bottom:1px solid #dcdcdc;
-    z-index:100;
-    padding:1rem 2rem;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-nav#nav ul{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    list-style:none;
+a {
+  color: inherit;
 }
 
-.logo a{
-    text-decoration:none;
-    color:#000;
-    font-size:1.3rem;
-    font-weight:700;
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e1e1e1;
+
+  z-index: 100;
+  padding: 1rem 2rem;
 }
 
-.menu{
-    display:flex;
-    gap:2.5rem;
-    font-size:1.15rem;
+nav#nav ul {
+  max-width: 1350px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  list-style: none;
 }
 
-.menu a{
-    color:#000;
-    text-decoration:none;
-    font-weight:600;
-    border-bottom:2px solid transparent;
-    padding-bottom:.25rem;
-    transition:color .2s ease, border-color .2s ease;
+.logo a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
-.menu a:hover{
-    color:#F5277D;
-    border-color:#F5277D;
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1.45rem;
+  list-style: none;
 }
 
-/* ---------------- LAYOUT ---------------- */
+.menu a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.96rem;
+  font-weight: 600;
 
-#top{
-    display:flex;
-    gap:4rem;
-    margin:3rem 10rem;
-    flex-wrap:wrap;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
-/* ---------------- PROFILE ---------------- */
-
-.profile{
-    position:fixed;
-    top:9rem;
-    left:6rem;
-    width:285px;
-    text-align:center;
+.menu a:hover,
+.menu a.active {
+  color: #F5277D;
+  border-color: #F5277D;
 }
 
-.profile img{
-    width:190px;
-    height:190px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:.9rem;
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
+
+.page-layout {
+  width: min(1320px, calc(100% - 3rem));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 285px minmax(0, 1fr);
+  gap: 4rem;
+
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
-.profile h2{
-    font-size:1.15rem;
-    line-height:1.3;
-    margin-bottom:.25rem;
+/* =========================================================
+   FIXED PROFILE
+========================================================= */
+
+.profile {
+  position: fixed;
+  top: 8.5rem;
+
+  width: 285px;
+  text-align: center;
 }
 
-.profile p{
-    font-size:.95rem;
-    line-height:1.4;
-    color:#666;
+.profile img {
+  width: 190px;
+  height: 190px;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  margin: 0 auto 0.9rem;
 }
 
-.profile hr{
-    margin:.8rem auto 1rem;
-    width:70%;
-    border:none;
-    border-top:1px solid #e3e3e3;
+.profile h1 {
+  font-size: 1.18rem;
+  line-height: 1.35;
+
+  margin-bottom: 0.25rem;
 }
 
-/* ---------------- CONTACT BUTTONS ---------------- */
+.profile-role {
+  color: #666666;
+  font-size: 0.9rem;
+  line-height: 1.45;
 
-.contact-cards{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:10px;
-    margin-top:1rem;
+  margin-bottom: 0.8rem;
 }
 
-.contact-card{
-    min-height:42px;
-    padding:.55rem .7rem;
+.profile-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
+  color: #777777;
+  font-size: 0.8rem;
 
-    border:1px solid #d7d7d7;
-    border-radius:11px;
-    background:#fafafa;
-
-    color:#444;
-    text-decoration:none;
-    font-weight:600;
-    font-size:.88rem;
-    line-height:1.2;
-    text-align:center;
-
-    transition:
-        background .2s ease,
-        border-color .2s ease,
-        color .2s ease,
-        transform .2s ease,
-        box-shadow .2s ease;
+  margin-bottom: 1rem;
 }
 
-.contact-card:hover{
-    background:#f1f1f1;
-    border-color:#999;
-    color:#000;
-    transform:translateY(-2px);
-    box-shadow:0 5px 14px rgba(0,0,0,.08);
+.profile hr {
+  width: 70%;
+  margin: 0 auto 1rem;
+
+  border: none;
+  border-top: 1px solid #e3e3e3;
 }
 
-.contact-card i{
-    color:#666;
-    font-size:1rem;
-    flex-shrink:0;
+/* =========================================================
+   CONTACT BUTTONS
+========================================================= */
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
-.contact-card:hover i{
-    color:#000;
+.contact-card {
+  min-height: 42px;
+  padding: 0.55rem 0.65rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 1px solid #d7d7d7;
+  border-radius: 11px;
+  background: #fafafa;
+
+  color: #444444;
+  text-decoration: none;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* LinkedIn and ORCID complete the final row */
-.contact-card.linkedin,
-.contact-card.orcid{
-    width:100%;
+.contact-card:hover {
+  background: #f1f1f1;
+  border-color: #999999;
+  color: #000000;
+
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* ---------------- MAIN TEXT ---------------- */
-
-.text{
-    flex:1;
-    min-width:300px;
-    max-width:900px;
-    margin-left:300px;
-    text-align:justify;
+.contact-card i {
+  color: #666666;
+  font-size: 0.95rem;
 }
 
-.text header h1{
-    font-size:1.45rem;
-    margin-top:2rem;
-    margin-bottom:1rem;
-    border-bottom:2px solid #000;
-    padding-bottom:.3rem;
+.contact-card:hover i {
+  color: #000000;
 }
 
-.text h2{
-    font-size:1.35rem;
-    margin-top:1.5rem;
-    margin-bottom:.5rem;
-    border-bottom:1px solid #000;
-    padding-bottom:.2rem;
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+  min-width: 0;
+  grid-column: 2;
 }
 
-.text p{
-    margin-bottom:1.2rem;
+.page-intro {
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid #e1e1e1;
 }
 
-/* ---------------- MOBILE ---------------- */
+.page-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
-@media(max-width:700px){
+  color: #F5277D;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 
-    nav#nav{
-        padding:.9rem 1rem;
-    }
-
-    nav#nav ul{
-        flex-direction:column;
-        gap:.8rem;
-    }
-
-    .menu{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:.8rem 1rem;
-        font-size:1rem;
-    }
-
-    #top{
-        flex-direction:column;
-        margin:9.5rem 1.5rem 2rem;
-    }
-
-    .profile{
-        position:static;
-        width:100%;
-        margin-bottom:2rem;
-    }
-
-    .profile img{
-        width:180px;
-        height:180px;
-    }
-
-    .text{
-        margin-left:0;
-        text-align:left;
-    }
-
-    .contact-cards{
-        max-width:320px;
-        margin:1rem auto 0;
-    }
+  margin-bottom: 0.9rem;
 }
 
-@media(max-width:430px){
+.page-intro h2 {
+  max-width: 760px;
 
-    .contact-cards{
-        grid-template-columns:1fr;
-        max-width:260px;
-    }
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+
+  margin-bottom: 1rem;
+}
+
+.page-intro p {
+  max-width: 780px;
+
+  color: #555555;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+
+  margin-top: 1.5rem;
+}
+
+.interest-tag {
+  display: inline-block;
+
+  padding: 0.35rem 0.8rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+
+  background: #fafafa;
+  color: #555555;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.content-section {
+  padding-top: 3.7rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.4rem;
+
+  border-bottom: 2px solid #171717;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.section-header p {
+  max-width: 470px;
+
+  color: #666666;
+  font-size: 0.88rem;
+  text-align: right;
+}
+
+/* =========================================================
+   ABOUT CARD
+========================================================= */
+
+.about-card {
+  padding: 1.8rem;
+  border: 1px solid #dddddd;
+  border-radius: 16px;
+
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.about-card p {
+  color: #444444;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.about-card a {
+  color: #59a3d4;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about-card a:hover {
+  color: #F5277D;
+}
+
+/* =========================================================
+   EDUCATION CARD
+========================================================= */
+
+.education-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.2rem;
+
+  padding: 1.5rem;
+  border: 1px solid #dddddd;
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.education-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+
+  background: #fafafa;
+  color: #555555;
+
+  font-size: 1.15rem;
+}
+
+.education-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.education-degree {
+  color: #555555;
+  font-size: 0.92rem;
+  margin-bottom: 0.2rem;
+}
+
+.education-date {
+  color: #888888;
+  font-size: 0.83rem;
+}
+
+/* =========================================================
+   RESEARCH EXPERIENCE
+========================================================= */
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.research-card {
+  display: grid;
+  grid-template-columns: 165px minmax(0, 1fr);
+  gap: 1.4rem;
+
+  padding: 1.45rem;
+  border: 1px solid #dddddd;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-3px);
+  border-color: #c6c6c6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.research-date {
+  color: #777777;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.research-content h3 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.research-role {
+  color: #333333;
+  font-size: 0.91rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.research-lab {
+  color: #666666;
+  font-size: 0.86rem;
+  margin-bottom: 0.8rem;
+}
+
+.research-lab a {
+  color: #59a3d4;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.research-lab a:hover {
+  color: #F5277D;
+}
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.48rem;
+}
+
+.research-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.27rem 0.62rem;
+  border: 1px solid #dddddd;
+  border-radius: 999px;
+
+  background: #fafafa;
+  color: #666666;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   BEYOND THE LAB
+========================================================= */
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+
+  margin-bottom: 1.4rem;
+}
+
+.personal-card {
+  min-height: 145px;
+
+  padding: 1.2rem;
+  border: 1px solid #dddddd;
+  border-radius: 14px;
+
+  background: #fafafa;
+}
+
+.personal-card i {
+  color: #777777;
+  font-size: 1.3rem;
+  margin-bottom: 0.9rem;
+}
+
+.personal-card h3 {
+  font-size: 0.92rem;
+  margin-bottom: 0.3rem;
+}
+
+.personal-card p {
+  color: #777777;
+  font-size: 0.8rem;
+}
+
+.personal-description {
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  margin-top: 5rem;
+  padding-top: 1.4rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  border-top: 1px solid #dddddd;
+
+  color: #777777;
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #555555;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #F5277D;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .menu {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .page-layout {
+    width: min(1200px, calc(100% - 2rem));
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .profile {
+    width: 260px;
+  }
+
+  .personal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+
+  nav#nav {
+    padding: 0.9rem 1rem;
+  }
+
+  nav#nav ul {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem 1rem;
+  }
+
+  .page-layout {
+    display: block;
+    width: min(100% - 2rem, 1180px);
+
+    padding-top: 9rem;
+  }
+
+  .profile {
+    position: static;
+    width: 100%;
+    max-width: 340px;
+
+    margin: 0 auto 3rem;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .page-intro {
+    padding-top: 1rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .section-header p {
+    text-align: left;
+  }
+
+  .research-card {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .page-intro h2 {
+    font-size: 2.45rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .education-card {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    padding: 1.35rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }
 
 </style>
@@ -273,189 +714,551 @@ nav#nav ul{
 
 <body>
 
-<nav id="nav">
-    <ul>
-        <li class="logo">
-            <a href="index.html">Alejandra Carrillo</a>
-        </li>
+<!-- =======================================================
+     NAVIGATION
+======================================================= -->
 
-        <div class="menu">
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="talks.html">Talks</a></li>
-            <li><a href="portfolio.html">Gallery</a></li>
-            <li><a href="outreach.html">Explore Science</a></li>
-        </div>
-    </ul>
+<nav id="nav">
+  <ul>
+
+    <li class="logo">
+      <a href="index.html">Alejandra Carrillo</a>
+    </li>
+
+    <div class="menu">
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="portfolio.html">Gallery</a></li>
+      <li><a href="outreach.html">Explore Science</a></li>
+    </div>
+
+  </ul>
 </nav>
 
-<section id="top">
+<!-- =======================================================
+     PAGE
+======================================================= -->
 
-    <aside class="profile">
+<div class="page-layout">
 
-        <img src="tu-foto.jpg" alt="Portrait of Alejandra Carrillo-Carlos">
+  <!-- =====================================================
+       FIXED PROFILE
+  ====================================================== -->
 
-        <h2>Alejandra Carrillo-Carlos</h2>
+  <aside class="profile">
 
-        <p>
-            <strong>B.S. Student in Genomic Sciences</strong>
-        </p>
+    <img
+      src="tu-foto.jpg"
+      alt="Portrait of Alejandra Carrillo-Carlos"
+    >
 
-        <hr>
+    <h1>
+      Alejandra Carrillo-Carlos
+    </h1>
 
-        <div class="contact-cards">
+    <p class="profile-role">
+      <strong>B.S. Student in Genomic Sciences</strong>
+    </p>
 
-            <a class="contact-card"
-               href="mailto:alecarrillocarlos@gmail.com">
-                <i class="fas fa-envelope"></i>
-                <span>Email</span>
-            </a>
+    <p class="profile-location">
+      <i class="fas fa-location-dot"></i>
+      Morelos, Mexico
+    </p>
 
-            <a class="contact-card"
-               href="Cv.html">
-                <i class="fas fa-file-lines"></i>
-                <span>CV</span>
-            </a>
+    <hr>
 
-            <a class="contact-card"
-               href="https://github.com/alejandracarrilloca"
-               target="_blank"
-               rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-            </a>
+    <div class="contact-cards">
 
-            <a class="contact-card"
-               href="https://scholar.google.com/citations?user=N4IRuzUAAAAJ&hl=en"
-               target="_blank"
-               rel="noopener noreferrer">
-                <i class="fas fa-graduation-cap"></i>
-                <span>Scholar</span>
-            </a>
+      <a
+        class="contact-card"
+        href="mailto:alecarrillocarlos@gmail.com"
+      >
+        <i class="fas fa-envelope"></i>
+        <span>Email</span>
+      </a>
 
-            <a class="contact-card linkedin"
-               href="https://www.linkedin.com/in/alejandracarrilloca/"
-               target="_blank"
-               rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
+      <a
+        class="contact-card"
+        href="Cv.html"
+      >
+        <i class="fas fa-file-lines"></i>
+        <span>CV</span>
+      </a>
 
-            <a class="contact-card orcid"
-               href="https://orcid.org/0009-0009-2252-3965"
-               target="_blank"
-               rel="noopener noreferrer">
-                <i class="fab fa-orcid"></i>
-                <span>ORCID</span>
-            </a>
+      <a
+        class="contact-card"
+        href="https://github.com/alejandracarrilloca"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
 
-        </div>
+      <a
+        class="contact-card"
+        href="https://scholar.google.com/citations?user=N4IRuzUAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fas fa-graduation-cap"></i>
+        <span>Scholar</span>
+      </a>
 
-    </aside>
+      <a
+        class="contact-card"
+        href="https://www.linkedin.com/in/alejandracarrilloca/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
 
-    <div class="text">
-
-        <header>
-            <h1>About Me</h1>
-        </header>
-
-        <p>
-            I am a
-            <a href="https://www.ccg.unam.mx/en/"
-               target="_blank"
-               rel="noopener noreferrer">
-                Genomic Sciences
-            </a>
-            undergraduate student at the
-            <a href="https://www.unam.mx/"
-               target="_blank"
-               rel="noopener noreferrer">
-                National Autonomous University of Mexico (UNAM)
-            </a>
-            with a strong interest in immunology, neurology, and cancer.
-            My academic and research work focuses on understanding the genomic
-            and molecular mechanisms that regulate immune responses.
-            I am particularly interested in computational biology,
-            systems biology, and the application of genomics to understanding
-            disease and gene regulation.
-        </p>
-
-        <h2>Education</h2>
-
-        <p>
-            <strong>
-                National Autonomous University of Mexico (UNAM), Morelos, Mexico
-            </strong><br>
-            <span style="color:darkgray;">
-                B.S. in Genomic Sciences | 2024 – Present
-            </span>
-        </p>
-
-        <h2>Research Experience</h2>
-
-        <p style="color:gray;display:flex;justify-content:space-between;gap:1rem;">
-            <span>📍 On-site | 💻 Remote</span>
-            <span>🔬 Experimental | 🧮 Computational</span>
-        </p>
-
-        <p>
-            <strong>
-                Stowers Institute for Medical Research, Kansas City, USA |
-                <a href="https://labs.stowers.org/zeitlinger"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Laboratory of Dr. Julia Zeitlinger
-                </a>
-            </strong><br>
-            Summer Research Scholar 🧮 | 📍🇺🇸 June 2026 – August 2026
-        </p>
-
-        <p>
-            <strong>
-                Boston Children's Hospital, Boston, USA |
-                Vitor Rezende da Costa Aguiar, Ph.D.
-            </strong><br>
-            Undergraduate Researcher 🧮 | 💻🇺🇸 September 2025 – Present
-        </p>
-
-        <p>
-            <strong>
-                Institute of Biotechnology, Morelos, Mexico |
-                <a href="https://www.ibt.unam.mx/perfil/3283/dra-yvonne-jane-rosenstein-azoulay"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Laboratory of Dr. Yvonne Jane Rosenstein Azoulay
-                </a>
-            </strong><br>
-            Undergraduate Researcher 🔬 🧮 | 📍🇲🇽 December 2024 – Present
-        </p>
-
-        <p>
-            <strong>
-                Center for Genomic Sciences, Morelos, Mexico |
-                <a href="http://freyrelab.org/en/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Laboratory of Dr. Julio A. Freyre-González
-                </a>
-            </strong><br>
-            Trainee 🧮 | 📍🇲🇽 December 2024 – May 2025
-        </p>
-
-        <h2>Beyond the Lab</h2>
-
-        <p>
-            I love swimming 🏊‍♀️ and also enjoy running 🏃‍♀️ whenever I need a
-            mental break or some fresh air 🌿. In quieter moments, I enjoy
-            embroidery and sewing 🧵, hobbies that allow me to slow down and be
-            creative. I also love traveling, discovering new places 🗺️,
-            experiencing different cultures 🥘, and seeing the world from new
-            perspectives.
-        </p>
+      <a
+        class="contact-card"
+        href="https://orcid.org/0009-0009-2252-3965"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-orcid"></i>
+        <span>ORCID</span>
+      </a>
 
     </div>
 
-</section>
+  </aside>
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
+  <main class="main-content">
+
+    <!-- INTRO -->
+
+    <header class="page-intro">
+
+      <span class="page-label">
+        <i class="fas fa-dna"></i>
+        Genomics · Immunology · Computational Biology
+      </span>
+
+      <h2>
+        About Me
+      </h2>
+
+      <p>
+        I study how genomic and molecular mechanisms shape immune responses,
+        gene regulation, and disease, using both computational and experimental
+        approaches.
+      </p>
+
+      <div class="interest-tags">
+        <span class="interest-tag">Immunology</span>
+        <span class="interest-tag">Computational Biology</span>
+        <span class="interest-tag">Cancer Biology</span>
+        <span class="interest-tag">Gene Regulation</span>
+        <span class="interest-tag">Systems Biology</span>
+      </div>
+
+    </header>
+
+    <!-- ABOUT -->
+
+    <section class="content-section">
+
+      <div class="section-header">
+
+        <h2>
+          Research Interests
+        </h2>
+
+        <p>
+
+        </p>
+
+      </div>
+
+      <div class="about-card">
+
+        <p>
+          I am an undergraduate student in
+          <a
+            href="https://www.ccg.unam.mx/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Genomic Sciences
+          </a>
+          at the
+          <a
+            href="https://www.unam.mx/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            National Autonomous University of Mexico (UNAM)
+          </a>.
+          My academic and research work focuses on understanding the genomic
+          and molecular mechanisms that regulate immune responses, gene
+          expression, and disease. I am particularly interested in combining
+          computational biology, systems biology, and experimental approaches
+          to investigate biological questions in immunology and cancer.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section class="content-section">
+
+      <div class="section-header">
+
+        <h2>
+          Education
+        </h2>
+
+        <p>
+        </p>
+
+      </div>
+
+      <article class="education-card">
+
+        <div class="education-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+
+        <div>
+
+          <h3>
+            National Autonomous University of Mexico
+          </h3>
+
+          <p class="education-degree">
+            B.S. in Genomic Sciences
+          </p>
+
+          <p class="education-date">
+            Morelos, Mexico · 2024 – Present
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <!-- RESEARCH EXPERIENCE -->
+
+    <section class="content-section">
+
+      <div class="section-header">
+
+        <h2>
+          Research Experience
+        </h2>
+
+        <p>
+        </p>
+
+      </div>
+
+      <div class="research-list">
+
+        <article class="research-card">
+
+          <div class="research-date">
+            June 2026 – August 2026
+          </div>
+
+          <div class="research-content">
+
+            <h3>
+              Stowers Institute for Medical Research
+            </h3>
+
+            <p class="research-role">
+              Summer Research Scholar
+            </p>
+
+            <p class="research-lab">
+              Kansas City, Missouri, USA ·
+              <a
+                href="https://labs.stowers.org/zeitlinger"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Zeitlinger Laboratory
+              </a>
+            </p>
+
+            <div class="research-tags">
+
+              <span class="research-tag">
+                <i class="fas fa-laptop-code"></i>
+                Computational
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-dna"></i>
+                Gene Regulation
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-chart-line"></i>
+                Genomics
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-location-dot"></i>
+                On-site
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <article class="research-card">
+
+          <div class="research-date">
+            September 2025 – Present
+          </div>
+
+          <div class="research-content">
+
+            <h3>
+              Boston Children's Hospital
+            </h3>
+
+            <p class="research-role">
+              Undergraduate Researcher
+            </p>
+
+            <p class="research-lab">
+              Boston, Massachusetts, USA · Vitor Rezende da Costa Aguiar, Ph.D.
+            </p>
+
+            <div class="research-tags">
+
+              <span class="research-tag">
+                <i class="fas fa-laptop-code"></i>
+                Computational
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-chart-simple"></i>
+                RNA-seq
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-database"></i>
+                Human Genomics
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-wifi"></i>
+                Remote
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <article class="research-card">
+
+          <div class="research-date">
+            December 2024 – Present
+          </div>
+
+          <div class="research-content">
+
+            <h3>
+              Institute of Biotechnology, UNAM
+            </h3>
+
+            <p class="research-role">
+              Undergraduate Researcher
+            </p>
+
+            <p class="research-lab">
+              Morelos, Mexico ·
+              <a
+                href="https://www.ibt.unam.mx/perfil/3283/dra-yvonne-jane-rosenstein-azoulay"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Rosenstein Laboratory
+              </a>
+            </p>
+
+            <div class="research-tags">
+
+              <span class="research-tag">
+                <i class="fas fa-flask"></i>
+                Experimental
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-laptop-code"></i>
+                Computational
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-shield-virus"></i>
+                Immunology
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-location-dot"></i>
+                On-site
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <article class="research-card">
+
+          <div class="research-date">
+            December 2024 – May 2025
+          </div>
+
+          <div class="research-content">
+
+            <h3>
+              Center for Genomic Sciences, UNAM
+            </h3>
+
+            <p class="research-role">
+              Research Trainee
+            </p>
+
+            <p class="research-lab">
+              Morelos, Mexico ·
+              <a
+                href="http://freyrelab.org/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Freyre-González Laboratory
+              </a>
+            </p>
+
+            <div class="research-tags">
+
+              <span class="research-tag">
+                <i class="fas fa-laptop-code"></i>
+                Computational
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-diagram-project"></i>
+                Systems Biology
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-dna"></i>
+                Genomics
+              </span>
+
+              <span class="research-tag">
+                <i class="fas fa-location-dot"></i>
+                On-site
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- BEYOND THE LAB -->
+
+    <section class="content-section">
+
+      <div class="section-header">
+
+        <h2>
+          Beyond the Lab
+        </h2>
+
+        <p>
+        </p>
+
+      </div>
+
+      </div>
+
+      <p class="personal-description">
+        Outside the lab, I enjoy swimming and running whenever I need a mental
+        break or some time outdoors. I also enjoy embroidery and sewing, which
+        allow me to slow down and be creative. Traveling is another important
+        part of my life because it gives me the opportunity to discover new
+        places, experience different cultures, and see the world from new
+        perspectives.
+      </p>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+      <p>
+        © 2026 Alejandra Carrillo-Carlos
+      </p>
+
+      <div class="footer-links">
+
+        <a href="mailto:alecarrillocarlos@gmail.com">
+          Email
+        </a>
+
+        <a
+          href="https://github.com/alejandracarrilloca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/alejandracarrilloca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://orcid.org/0009-0009-2252-3965"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ORCID
+        </a>
+
+      </div>
+
+    </footer>
+
+  </main>
+
+</div>
 
 </body>
 </html>
