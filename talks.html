@@ -4,10 +4,21 @@
 <meta charset="utf-8" />
 <title>Talks - Alejandra Carrillo-Carlos</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
 
 <style>
+
 * {
   margin: 0;
   padding: 0;
@@ -27,154 +38,300 @@ a {
   text-decoration: underline;
 }
 
-.contact-info a {
-  color: #000;
-  text-decoration: none;
-}
+/* ---------------- NAVBAR ---------------- */
 
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-
-/* --- NAVIGATION BAR --- */
 nav#nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: white;
+  background: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
   z-index: 100;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #ccc;
 }
 
 nav#nav ul {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
 
-nav#nav .logo a {
+.logo a {
+  color: #000000;
+  text-decoration: none;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #000;
-  text-decoration: none;
 }
 
-nav#nav .menu {
+.menu {
   display: flex;
   gap: 2.5rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
-nav#nav .menu a {
-  color: #000;
+.menu a {
+  color: #000000;
   text-decoration: none;
   font-weight: 600;
-  padding-bottom: 0.3rem;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease-in-out;
+  padding-bottom: 0.25rem;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
-nav#nav .menu a:hover {
-  color: #F5277D;  
-  transform: scale(1.05); 
-  border-bottom: 2px solid #F5277D; 
+.menu a:hover {
+  color: #F5277D;
+  border-color: #F5277D;
 }
 
+/* ---------------- PAGE LAYOUT ---------------- */
 
-/* --- PAGE STRUCTURE --- */
 #top {
   display: flex;
   gap: 4rem;
   margin: 3rem 10rem;
   flex-wrap: wrap;
-  justify-content: flex-start;
 }
+
+/* ---------------- PROFILE ---------------- */
 
 .profile {
   position: fixed;
-  top: 10rem;
+  top: 9rem;
   left: 6rem;
-  width: 270px;
-  text-align: left;
+  width: 285px;
+  text-align: center;
   z-index: 10;
 }
 
 .profile img {
-  width: 210px;
-  height: 210px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
 .profile h2 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
 }
 
 .profile p {
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #666666;
 }
 
-.contact-info {
-  list-style: none;
-  padding: 0;
-  margin-top: 0.8rem;
+.profile hr {
+  width: 70%;
+  margin: 0.8rem auto 1rem;
+  border: none;
+  border-top: 1px solid #e3e3e3;
 }
 
-.contact-info li {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
+/* ---------------- CONTACT BUTTONS ---------------- */
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
 }
 
-.contact-info li i {
-  width: 20px;
+.contact-card {
+  min-height: 42px;
+  padding: 0.55rem 0.7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid #d7d7d7;
+  border-radius: 11px;
+  background: #fafafa;
+
+  color: #444444;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.2;
   text-align: center;
-  margin-right: 8px;
-  color: #333;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
+
+.contact-card:hover {
+  background: #f1f1f1;
+  border-color: #999999;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card i {
+  color: #666666;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-card:hover i {
+  color: #000000;
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
 
 .text {
   flex: 1;
   min-width: 300px;
   max-width: 900px;
+  margin-left: 300px;
   text-align: justify;
-  margin-left: 260px;
 }
 
 .text header h1 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #000000;
   padding-bottom: 0.3rem;
 }
 
-.text h2 {
-  font-size: 1.4rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid #000;
-  padding-bottom: 0.2rem;
+/* ---------------- YEAR SECTIONS ---------------- */
+
+.talk-year {
+  margin-bottom: 3rem;
 }
 
-.text p {
-  margin-bottom: 1.2rem;
+.talk-year + .talk-year {
+  margin-top: 2.5rem;
 }
 
+.year {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #555555;
+  margin: 1.2rem 0 1rem;
+}
 
-/* --- Responsive --- */
+/* ---------------- TALK CARD ---------------- */
+
+.talk {
+  padding: 1.4rem 0 1.8rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+.talk:first-of-type {
+  padding-top: 0.4rem;
+}
+
+.talk-title {
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin-bottom: 0.65rem;
+}
+
+.talk-event {
+  color: #555555;
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.talk-location {
+  color: #777777;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.talk-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.talk-badge {
+  display: inline-block;
+  padding: 0.28rem 0.7rem;
+  border: 1px solid #d6d6d6;
+  border-radius: 999px;
+  background: #fafafa;
+  color: #555555;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.talk-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.talk-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0.55rem 0.9rem;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+  background: #fafafa;
+
+  color: #444444;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.talk-link:hover {
+  background: #f1f1f1;
+  border-color: #999999;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------------- MOBILE ---------------- */
+
 @media (max-width: 700px) {
+
+  nav#nav {
+    padding: 0.9rem 1rem;
+  }
+
+  nav#nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
   #top {
     flex-direction: column;
-    margin: 2rem;
-    margin-left: 0;
+    margin: 9.5rem 1.5rem 2rem;
   }
 
   .profile {
@@ -183,10 +340,38 @@ nav#nav .menu a:hover {
     margin-bottom: 2rem;
   }
 
+  .profile img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .contact-cards {
+    max-width: 320px;
+    margin: 1rem auto 0;
+  }
+
   .text {
     margin-left: 0;
+    text-align: left;
   }
 }
+
+@media (max-width: 430px) {
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    max-width: 260px;
+  }
+
+  .talk-links {
+    flex-direction: column;
+  }
+
+  .talk-link {
+    width: 100%;
+  }
+}
+
 </style>
 </head>
 
@@ -194,7 +379,11 @@ nav#nav .menu a:hover {
 
 <nav id="nav">
   <ul>
-    <li class="logo"><a href="index.html">Alejandra Carrillo</a></li>
+
+    <li class="logo">
+      <a href="index.html">Alejandra Carrillo</a>
+    </li>
+
     <div class="menu">
       <li><a href="Cv.html">CV</a></li>
       <li><a href="projects.html">Projects</a></li>
@@ -202,36 +391,190 @@ nav#nav .menu a:hover {
       <li><a href="talks.html">Talks</a></li>
       <li><a href="portfolio.html">Gallery</a></li>
     </div>
+
   </ul>
 </nav>
 
 <section id="top">
 
   <aside class="profile">
-    <img src="tu-foto.jpg" alt="Foto de Alejandra Carrillo-Carlos" />
+
+    <img
+      src="tu-foto.jpg"
+      alt="Portrait of Alejandra Carrillo-Carlos"
+    />
+
     <h2>Alejandra Carrillo-Carlos</h2>
-    <p><strong>Genomic Sciences undergraduate student</strong></p>
-    <ul class="contact-info">
-      <li><i class="fas fa-location-dot"></i>Cuernavaca, Morelos, México</li>
-      <li><i class="fas fa-envelope"></i><a href="mailto:alecarrillocarlos@gmail.com">alecarrillocarlos@gmail.com</a></li>
-      <li><i class="fab fa-github"></i><a href="https://github.com/alejandracarrilloca" target="_blank">GitHub</a></li>
-      <li><i class="fab fa-orcid"></i><a href="https://orcid.org/0009-0009-2252-3965" target="_blank">ORCID</a></li>
-    </ul>
+
+    <p>
+      <strong>B.S. Student in Genomic Sciences</strong>
+    </p>
+
+    <hr>
+
+    <div class="contact-cards">
+
+      <a
+        class="contact-card"
+        href="mailto:alecarrillocarlos@gmail.com"
+      >
+        <i class="fas fa-envelope"></i>
+        <span>Email</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="Cv.html"
+      >
+        <i class="fas fa-file-lines"></i>
+        <span>CV</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="https://github.com/alejandracarrilloca"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="https://scholar.google.com/citations?user=N4IRuzUAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fas fa-graduation-cap"></i>
+        <span>Scholar</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="https://www.linkedin.com/in/alejandracarrilloca/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+
+      <a
+        class="contact-card"
+        href="https://orcid.org/0009-0009-2252-3965"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-orcid"></i>
+        <span>ORCID</span>
+      </a>
+
+    </div>
+
   </aside>
 
-  <div class="text">
+  <main class="text">
+
     <header>
-      <h1><strong>Talks</strong></h1>
+      <h1>Talks</h1>
     </header>
-    <p>
-  <strong>“Exploring the role of SPN-205: a nonsense-mediated decay targeted CD43 isoform”</strong><br>
-  <em>XXVI Mexican Immunology Society National Congress, Chihuahua, 2025</em><br>
-  <a href="ExploringtheRole.pdf" target="_blank"> </i> Article
-  </a>
-</p>
 
+    <!-- ---------------- 2026 ---------------- -->
 
-  </div>
+    <section class="talk-year">
+
+      <div class="year">2026</div>
+
+      <article class="talk">
+
+        <h2 class="talk-title">
+          Orientation Syntax of Insulator-Associated Motifs in Drosophila
+        </h2>
+
+        <p class="talk-event">
+          <strong>
+            Stowers Institute for Medical Research Summer Scholars Program
+          </strong>
+        </p>
+
+        <p class="talk-location">
+          Kansas City, Missouri, USA · July 2026
+        </p>
+
+        <div class="talk-meta">
+          <span class="talk-badge">Poster Presentation</span>
+          <span class="talk-badge">Genomics</span>
+          <span class="talk-badge">Gene Regulation</span>
+          <span class="talk-badge">Computational Biology</span>
+        </div>
+
+        <div class="talk-links">
+
+          <a
+            class="talk-link"
+            href="StowersPoster2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fas fa-file-pdf"></i>
+            <span>View Poster</span>
+          </a>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <!-- ---------------- 2025 ---------------- -->
+
+    <section class="talk-year">
+
+      <div class="year">2025</div>
+
+      <article class="talk">
+
+        <h2 class="talk-title">
+          Exploring the Role of SPN-205: A Nonsense-Mediated Decay-Targeted CD43 Isoform
+        </h2>
+
+        <p class="talk-event">
+          <strong>
+            XXVI National Congress of the Mexican Society for Immunology
+          </strong>
+        </p>
+
+        <p class="talk-location">
+          Chihuahua, Mexico · October 2025
+        </p>
+
+        <div class="talk-meta">
+          <span class="talk-badge">Poster Presentation</span>
+          <span class="talk-badge">Immunology</span>
+          <span class="talk-badge">CD43</span>
+          <span class="talk-badge">RNA Biology</span>
+        </div>
+
+        <div class="talk-links">
+
+          <a
+            class="talk-link"
+            href="ExploringtheRole.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fas fa-file-pdf"></i>
+            <span>View Poster</span>
+          </a>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
 
 </section>
 
