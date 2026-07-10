@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+<title>Explore Science - Alejandra Carrillo-Carlos</title>
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+
+<meta
+  name="description"
+  content="Science should be accessible beyond the laboratory. This page brings together articles, videos, interviews, and blog posts that explain scientific ideas for broader audiences."
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #171717;
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e1e1e1;
+
+  z-index: 100;
+  padding: 1rem 2rem;
+}
+
+nav#nav ul {
+  max-width: 1350px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style: none;
+}
+
+.logo a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  list-style: none;
+}
+
+.menu a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 600;
+
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: #F5277D;
+  border-color: #F5277D;
+}
+
+/* =========================================================
+   PAGE CONTAINER
+========================================================= */
+
+.page-container {
+  width: min(1180px, calc(100% - 3rem));
+  margin: 0 auto;
+  padding-top: 6.5rem;
+  padding-bottom: 5rem;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: #F5277D;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  max-width: 800px;
+
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+
+  margin-bottom: 1.3rem;
+}
+
+.hero-description {
+  max-width: 790px;
+  color: #555555;
+
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.hero-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+
+  margin-top: 1.8rem;
+}
+
+.topic {
+  display: inline-block;
+
+  padding: 0.35rem 0.8rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+
+  background: #fafafa;
+  color: #555555;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.content-section {
+  padding-top: 3.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.5rem;
+
+  border-bottom: 2px solid #171717;
+}
+
+.section-header h2 {
+  font-size: 1.55rem;
+  line-height: 1.3;
+}
+
+.section-header p {
+  max-width: 460px;
+  color: #666666;
+
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* =========================================================
+   FEATURED ARTICLE
+========================================================= */
+
+.featured-article {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+
+  border: 1px solid #dddddd;
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.article-visual {
+  min-height: 430px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(245, 39, 125, 0.17),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 75% 70%,
+      rgba(89, 163, 212, 0.22),
+      transparent 35%
+    ),
+    #f7f7f7;
+}
+
+.article-visual-content {
+  width: 78%;
+  text-align: center;
+}
+
+.mosquito-icon {
+  display: block;
+
+  color: #222222;
+  font-size: 6rem;
+
+  margin-bottom: 1rem;
+  transform: rotate(-12deg);
+}
+
+.article-visual-content span {
+  display: block;
+
+  color: #666666;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.7rem;
+}
+
+.article-visual-content h3 {
+  font-size: clamp(1.65rem, 4vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.article-content {
+  padding: 2.3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-type {
+  color: #F5277D;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.7rem;
+}
+
+.article-content h3 {
+  font-size: 1.7rem;
+  line-height: 1.3;
+
+  margin-bottom: 0.8rem;
+}
+
+.publication-source {
+  color: #555555;
+  font-size: 0.95rem;
+
+  margin-bottom: 1rem;
+}
+
+.article-summary {
+  color: #444444;
+  margin-bottom: 1.4rem;
+}
+
+.content-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+
+  margin-bottom: 1.4rem;
+}
+
+.meta-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.3rem 0.65rem;
+  border: 1px solid #dddddd;
+  border-radius: 999px;
+
+  color: #666666;
+  background: #fafafa;
+
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   BUTTONS AND LINKS
+========================================================= */
+
+.content-link {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  padding: 0.65rem 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #333333;
+
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 700;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.content-link:hover {
+  color: #000000;
+  background: #f4f4f4;
+  border-color: #999999;
+
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   VIDEO FEATURE
+========================================================= */
+
+.video-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+  border-radius: 16px;
+
+  background: #000000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-description h3 {
+  font-size: 1.45rem;
+  line-height: 1.35;
+
+  margin-bottom: 0.8rem;
+}
+
+.video-description p {
+  color: #555555;
+  margin-bottom: 1.2rem;
+}
+
+/* =========================================================
+   FUTURE CONTENT
+========================================================= */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+.placeholder-card {
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1.4rem;
+  border: 1px dashed #cccccc;
+  border-radius: 14px;
+
+  background: #fafafa;
+}
+
+.placeholder-card i {
+  color: #999999;
+  font-size: 1.5rem;
+
+  margin-bottom: 1rem;
+}
+
+.placeholder-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.55rem;
+}
+
+.placeholder-card p {
+  color: #777777;
+  font-size: 0.9rem;
+}
+
+.placeholder-label {
+  color: #999999;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  margin-top: 1.2rem;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  margin-top: 5rem;
+  padding-top: 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  border-top: 1px solid #dddddd;
+
+  color: #777777;
+  font-size: 0.82rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #555555;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #F5277D;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .menu {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .featured-article {
+    grid-template-columns: 1fr;
+  }
+
+  .article-visual {
+    min-height: 330px;
+  }
+
+  .video-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .video-description {
+    max-width: 760px;
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+
+  nav#nav {
+    padding: 0.9rem 1rem;
+  }
+
+  nav#nav ul {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem 1rem;
+  }
+
+  .page-container {
+    width: min(100% - 2rem, 1180px);
+    padding-top: 9rem;
+  }
+
+  .hero {
+    padding-top: 2.5rem;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .section-header p {
+    text-align: left;
+  }
+
+  .article-content {
+    padding: 1.4rem;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .menu {
+    font-size: 0.82rem;
+  }
+
+  .hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .article-visual {
+    min-height: 280px;
+  }
+
+  .mosquito-icon {
+    font-size: 4.5rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =======================================================
+     NAVIGATION
+======================================================= -->
+
+<nav id="nav">
+  <ul>
+
+    <li class="logo">
+      <a href="index.html">Alejandra Carrillo</a>
+    </li>
+
+    <div class="menu">
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="talks.html">Talks</a></li>
+
+      <li>
+        <a href="outreach.html" class="active">
+          Explore Science
+        </a>
+      </li>
+
+      <li><a href="portfolio.html">Gallery</a></li>
+    </div>
+
+  </ul>
+</nav>
+
+<!-- =======================================================
+     MAIN PAGE
+======================================================= -->
+
+<main class="page-container">
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <span class="hero-label">
+      <i class="fas fa-flask"></i>
+      Science beyond the laboratory
+    </span>
+
+    <h1>
+      Explore Science
+    </h1>
+
+    <p class="hero-description">
+      Science should be accessible beyond the laboratory. This page is a space for curious minds to explore biology through accessible
+      articles, videos, scientific news, and stories. Here, complex ideas
+      are explained clearly without losing the science behind them.
+    </p>
+
+    <div class="hero-topics">
+      <span class="topic">Genomics</span>
+      <span class="topic">Evolution</span>
+      <span class="topic">Immunology</span>
+      <span class="topic">Human Health</span>
+      <span class="topic">Scientific Discovery</span>
+    </div>
+
+  </header>
+
+  <!-- =====================================================
+       FEATURED ARTICLE
+  ====================================================== -->
+
+  <section class="content-section">
+
+    <div class="section-header">
+
+      <h2>Featured article</h2>
+
+      <p>
+        Stories that connect scientific research with the world around us.
+      </p>
+
+    </div>
+
+    <article class="featured-article">
+
+      <div class="article-visual">
+
+        <div class="article-visual-content">
+
+          <i class="fas fa-mosquito mosquito-icon"></i>
+
+          <span>Evolution in the city</span>
+
+          <h3>
+            El mosquito del metro de Londres
+          </h3>
+
+        </div>
+
+      </div>
+
+      <div class="article-content">
+
+        <p class="content-type">
+          Popular science article
+        </p>
+
+        <h3>
+          El mosquito del metro de Londres
+        </h3>
+
+        <p class="publication-source">
+          <em>¿Cómo ves?</em> · Universidad Nacional Autónoma de México · 2026
+        </p>
+
+        <p class="article-summary">
+          Deep beneath London, a population of mosquitoes has adapted to life
+          in underground tunnels. This story explores what these mosquitoes
+          can teach us about evolution, urban environments, and the ways
+          organisms respond to new ecological conditions.
+        </p>
+
+        <div class="content-meta">
+
+          <span class="meta-tag">
+            <i class="fas fa-newspaper"></i>
+            Article
+          </span>
+
+          <span class="meta-tag">
+            <i class="fas fa-dna"></i>
+            Evolution
+          </span>
+
+          <span class="meta-tag">
+            <i class="fas fa-city"></i>
+            Urban biology
+          </span>
+
+          <span class="meta-tag">
+            Spanish
+          </span>
+
+        </div>
+
+        <!-- Replace ARTICLE-LINK-HERE with the real article URL. -->
+
+        <a
+          class="content-link"
+          href="ARTICLE-LINK-HERE"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fas fa-book-open"></i>
+          Read the article
+        </a>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <!-- =====================================================
+       VIDEO
+  ====================================================== -->
+
+  <section class="content-section">
+
+    <div class="section-header">
+
+      <h2>Watch</h2>
+
+      <p>
+        Conversations and media appearances that bring science to broader audiences.
+      </p>
+
+    </div>
+
+    <article class="video-feature">
+
+      <div class="video-wrapper">
+
+        <iframe
+          src="https://www.youtube.com/embed/2qFWdtZdDBg"
+          title="Science television appearance featuring Alejandra Carrillo-Carlos"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+      <div class="video-description">
+
+        <p class="content-type">
+          Television appearance
+        </p>
+
+        <h3>
+          Science on TV
+        </h3>
+
+        <p>
+          A television conversation bringing scientific ideas to a wider
+          audience. Watch the full segment to learn more about the topic and
+          the research discussed during the program.
+        </p>
+
+        <div class="content-meta">
+
+          <span class="meta-tag">
+            <i class="fas fa-tv"></i>
+            Television
+          </span>
+
+          <span class="meta-tag">
+            <i class="fab fa-youtube"></i>
+            Video
+          </span>
+
+          <span class="meta-tag">
+            Spanish
+          </span>
+
+        </div>
+
+        <a
+          class="content-link"
+          href="https://www.youtube.com/watch?v=2qFWdtZdDBg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-youtube"></i>
+          Watch on YouTube
+        </a>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <!-- =====================================================
+       FUTURE CONTENT
+  ====================================================== -->
+
+  <section class="content-section">
+
+    <div class="section-header">
+
+      <h2>More science coming soon</h2>
+
+      <p>
+        New articles, scientific news, and explanatory posts will be added here.
+      </p>
+
+    </div>
+
+    <div class="content-grid">
+
+      <article class="placeholder-card">
+
+        <div>
+          <i class="fas fa-newspaper"></i>
+
+          <h3>
+            Science news
+          </h3>
+
+          <p>
+            Accessible explanations of recent discoveries and developments
+            across biology and genomics.
+          </p>
+        </div>
+
+        <span class="placeholder-label">
+          Coming soon
+        </span>
+
+      </article>
+
+      <article class="placeholder-card">
+
+        <div>
+          <i class="fas fa-pen-nib"></i>
+
+          <h3>
+            Blog posts
+          </h3>
+
+          <p>
+            Longer reflections about research, scientific ideas, and how
+            biological questions are investigated.
+          </p>
+        </div>
+
+        <span class="placeholder-label">
+          Coming soon
+        </span>
+
+      </article>
+
+      <article class="placeholder-card">
+
+        <div>
+          <i class="fas fa-circle-play"></i>
+
+          <h3>
+            Videos and interviews
+          </h3>
+
+          <p>
+            Conversations, interviews, and visual explanations designed for
+            audiences beyond the laboratory.
+          </p>
+        </div>
+
+        <span class="placeholder-label">
+          Coming soon
+        </span>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <p>
+      © 2026 Alejandra Carrillo-Carlos
+    </p>
+
+    <div class="footer-links">
+
+      <a href="mailto:alecarrillocarlos@gmail.com">
+        Email
+      </a>
+
+      <a
+        href="https://github.com/alejandracarrilloca"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/alejandracarrilloca/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+    </div>
+
+  </footer>
+
+</main>
+
+</body>
+</html>
