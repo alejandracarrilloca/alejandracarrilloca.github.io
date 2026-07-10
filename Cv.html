@@ -60,6 +60,10 @@ a {
   color: inherit;
 }
 
+button {
+  font-family: inherit;
+}
+
 /* =========================================================
    NAVIGATION
 ========================================================= */
@@ -260,7 +264,7 @@ nav#nav ul {
 ========================================================= */
 
 .page-intro {
-  padding: 2.5rem 0 3rem;
+  padding: 2.5rem 0 2.2rem;
   border-bottom: 1px solid #e1e1e1;
 }
 
@@ -288,14 +292,6 @@ nav#nav ul {
   margin-bottom: 1rem;
 }
 
-.page-intro p {
-  max-width: 780px;
-
-  color: #555555;
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
 /* =========================================================
    CV ACTIONS
 ========================================================= */
@@ -305,7 +301,7 @@ nav#nav ul {
   flex-wrap: wrap;
   gap: 0.75rem;
 
-  margin-top: 1.5rem;
+  margin-top: 1.4rem;
 }
 
 .cv-button {
@@ -324,6 +320,7 @@ nav#nav ul {
   text-decoration: none;
   font-size: 0.84rem;
   font-weight: 700;
+  cursor: pointer;
 
   transition:
     color 0.2s ease,
@@ -355,41 +352,12 @@ nav#nav ul {
 }
 
 /* =========================================================
-   SECTION HEADER
+   CV VIEWER
 ========================================================= */
 
 .content-section {
-  padding-top: 3.7rem;
+  padding-top: 2.2rem;
 }
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 2rem;
-
-  padding-bottom: 0.7rem;
-  margin-bottom: 1.4rem;
-
-  border-bottom: 2px solid #171717;
-}
-
-.section-header h2 {
-  font-size: 1.5rem;
-  line-height: 1.3;
-}
-
-.section-header p {
-  max-width: 470px;
-
-  color: #666666;
-  font-size: 0.88rem;
-  text-align: right;
-}
-
-/* =========================================================
-   CV VIEWER
-========================================================= */
 
 .cv-container {
   width: 100%;
@@ -414,33 +382,69 @@ nav#nav ul {
   background: #fafafa;
 }
 
-.cv-toolbar-info {
-  min-width: 0;
-}
-
-.cv-toolbar-info h3 {
-  font-size: 0.95rem;
-  line-height: 1.3;
-  margin-bottom: 0.1rem;
-}
-
 .cv-toolbar-info p {
   color: #777777;
-  font-size: 0.75rem;
-}
-
-.cv-toolbar-icon {
-  color: #777777;
-  font-size: 1.1rem;
+  font-size: 0.78rem;
 }
 
 .cv-frame {
   display: block;
   width: 100%;
-  height: 1120px;
+
+  height: calc(100vh - 8rem);
+  min-height: 850px;
 
   border: none;
   background: #ffffff;
+}
+
+/* =========================================================
+   READING MODE
+========================================================= */
+
+body.reading-mode .page-layout {
+  display: block;
+  width: min(1550px, calc(100% - 2rem));
+  padding-top: 6.5rem;
+}
+
+body.reading-mode .profile {
+  display: none;
+}
+
+body.reading-mode .main-content {
+  width: 100%;
+}
+
+body.reading-mode .page-intro {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0.8rem 0 1rem;
+  border-bottom: none;
+}
+
+body.reading-mode .page-label,
+body.reading-mode .page-intro h2 {
+  display: none;
+}
+
+body.reading-mode .cv-actions {
+  margin: 0;
+}
+
+body.reading-mode .content-section {
+  padding-top: 0;
+}
+
+body.reading-mode .cv-container {
+  border-radius: 10px;
+}
+
+body.reading-mode .cv-frame {
+  height: calc(100vh - 10rem);
+  min-height: 760px;
 }
 
 /* =========================================================
@@ -448,32 +452,13 @@ nav#nav ul {
 ========================================================= */
 
 .site-footer {
-  margin-top: 5rem;
+  margin-top: 4rem;
   padding-top: 1.4rem;
-
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
 
   border-top: 1px solid #dddddd;
 
   color: #777777;
   font-size: 0.8rem;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.footer-links a {
-  color: #555555;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: #F5277D;
 }
 
 /* =========================================================
@@ -498,7 +483,7 @@ nav#nav ul {
   }
 
   .cv-frame {
-    height: 980px;
+    min-height: 760px;
   }
 }
 
@@ -542,18 +527,22 @@ nav#nav ul {
     padding-top: 1rem;
   }
 
-  .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.4rem;
-  }
-
-  .section-header p {
-    text-align: left;
-  }
-
   .cv-frame {
     height: 82vh;
+    min-height: 650px;
+  }
+
+  body.reading-mode .page-layout {
+    padding-top: 9rem;
+  }
+
+  body.reading-mode .page-intro {
+    justify-content: center;
+  }
+
+  body.reading-mode .cv-frame {
+    height: 78vh;
+    min-height: 620px;
   }
 }
 
@@ -581,13 +570,12 @@ nav#nav ul {
     align-items: flex-start;
   }
 
-  .cv-toolbar-info p {
-    display: none;
+  .site-footer {
+    margin-top: 3rem;
   }
 
-  .site-footer {
-    flex-direction: column;
-    gap: 0.8rem;
+  body.reading-mode .cv-actions {
+    width: 100%;
   }
 }
 
@@ -627,7 +615,7 @@ nav#nav ul {
 <div class="page-layout">
 
   <!-- =====================================================
-       FIXED PROFILE
+       PROFILE
   ====================================================== -->
 
   <aside class="profile">
@@ -723,14 +711,55 @@ nav#nav ul {
 
     <header class="page-intro">
 
-      <span class="page-label">
-        <i class="fas fa-file-lines"></i>
-        Academic CV
-      </span>
+      <div>
 
-      <h2>
-        Curriculum Vitae
-      </h2>
+        <span class="page-label">
+          <i class="fas fa-file-lines"></i>
+          Academic CV
+        </span>
+
+        <h2>
+          Curriculum Vitae
+        </h2>
+
+      </div>
+
+      <div class="cv-actions">
+
+        <a
+          class="cv-button primary"
+          href="https://docs.google.com/document/d/11rNzEUWYi9gJmdwOXPHx9ePf7SE6O6hmMjXRW_xknSw/edit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          Open CV
+        </a>
+
+        <a
+          class="cv-button"
+          href="https://docs.google.com/document/d/11rNzEUWYi9gJmdwOXPHx9ePf7SE6O6hmMjXRW_xknSw/export?format=pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fas fa-download"></i>
+          Download PDF
+        </a>
+
+        <button
+          class="cv-button"
+          id="reading-mode-button"
+          type="button"
+          aria-pressed="false"
+        >
+          <i class="fas fa-expand"></i>
+          <span id="reading-mode-text">
+            Reading Mode
+          </span>
+        </button>
+
+      </div>
+
     </header>
 
     <section class="content-section">
@@ -740,11 +769,11 @@ nav#nav ul {
         <div class="cv-toolbar">
 
           <div class="cv-toolbar-info">
-
             <p>
               Embedded Google Docs preview
             </p>
           </div>
+
         </div>
 
         <iframe
@@ -770,6 +799,49 @@ nav#nav ul {
   </main>
 
 </div>
+
+<script>
+
+const readingModeButton =
+  document.getElementById("reading-mode-button");
+
+const readingModeText =
+  document.getElementById("reading-mode-text");
+
+const readingModeIcon =
+  readingModeButton.querySelector("i");
+
+readingModeButton.addEventListener("click", () => {
+
+  const isReadingMode =
+    document.body.classList.toggle("reading-mode");
+
+  readingModeButton.setAttribute(
+    "aria-pressed",
+    String(isReadingMode)
+  );
+
+  if (isReadingMode) {
+
+    readingModeText.textContent =
+      "Exit Reading Mode";
+
+    readingModeIcon.className =
+      "fas fa-compress";
+
+  } else {
+
+    readingModeText.textContent =
+      "Reading Mode";
+
+    readingModeIcon.className =
+      "fas fa-expand";
+
+  }
+
+});
+
+</script>
 
 </body>
 </html>
