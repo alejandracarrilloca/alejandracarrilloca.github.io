@@ -288,36 +288,6 @@ nav#nav ul {
   margin-bottom: 1rem;
 }
 
-.page-intro p {
-  max-width: 790px;
-
-  color: #555555;
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
-.project-topics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-
-  margin-top: 1.5rem;
-}
-
-.project-topic {
-  display: inline-block;
-
-  padding: 0.35rem 0.8rem;
-  border: 1px solid #d8d8d8;
-  border-radius: 999px;
-
-  background: #fafafa;
-  color: #555555;
-
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
 /* =========================================================
    SECTION HEADING
 ========================================================= */
@@ -341,14 +311,6 @@ nav#nav ul {
 .section-header h2 {
   font-size: 1.5rem;
   line-height: 1.3;
-}
-
-.section-header p {
-  max-width: 470px;
-
-  color: #666666;
-  font-size: 0.88rem;
-  text-align: right;
 }
 
 /* =========================================================
@@ -397,13 +359,19 @@ nav#nav ul {
 .project-title {
   font-size: 1.3rem;
   line-height: 1.4;
-
   margin-bottom: 0.35rem;
 }
 
 .project-institution {
   color: #666666;
   font-size: 0.9rem;
+}
+
+.project-authors {
+  color: #555555;
+  font-size: 0.86rem;
+  font-weight: 500;
+  margin: 0.8rem 0 1rem;
 }
 
 .project-status {
@@ -433,7 +401,6 @@ nav#nav ul {
   color: #444444;
   font-size: 0.96rem;
   line-height: 1.8;
-
   margin-bottom: 1rem;
 }
 
@@ -461,6 +428,22 @@ nav#nav ul {
 
   font-size: 0.73rem;
   font-weight: 600;
+}
+
+.project-funding {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  color: #666666;
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  margin-top: 1.2rem;
+}
+
+.project-funding i {
+  color: #777777;
 }
 
 /* =========================================================
@@ -498,52 +481,6 @@ nav#nav ul {
   color: #777777;
   font-size: 0.78rem;
   line-height: 1.5;
-}
-
-/* =========================================================
-   PROJECT LINKS
-========================================================= */
-
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-
-  margin-top: 1.2rem;
-}
-
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-
-  padding: 0.58rem 0.85rem;
-  border: 1px solid #d2d2d2;
-  border-radius: 9px;
-
-  background: #ffffff;
-  color: #444444;
-
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 700;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.project-link:hover {
-  background: #f2f2f2;
-  border-color: #999999;
-  color: #000000;
-
-  transform: translateY(-2px);
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
 }
 
 /* =========================================================
@@ -625,7 +562,6 @@ nav#nav ul {
   .page-layout {
     display: block;
     width: min(100% - 2rem, 1180px);
-
     padding-top: 9rem;
   }
 
@@ -633,7 +569,6 @@ nav#nav ul {
     position: static;
     width: 100%;
     max-width: 340px;
-
     margin: 0 auto 3rem;
   }
 
@@ -643,16 +578,6 @@ nav#nav ul {
 
   .page-intro {
     padding-top: 1rem;
-  }
-
-  .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.4rem;
-  }
-
-  .section-header p {
-    text-align: left;
   }
 
   .project-card-header {
@@ -677,14 +602,6 @@ nav#nav ul {
     padding: 1.3rem;
   }
 
-  .project-links {
-    flex-direction: column;
-  }
-
-  .project-link {
-    width: 100%;
-  }
-
   .site-footer {
     flex-direction: column;
     gap: 0.8rem;
@@ -696,12 +613,7 @@ nav#nav ul {
 
 <body>
 
-<!-- =======================================================
-     NAVIGATION
-======================================================= -->
-
 <nav id="nav">
-
   <ul>
 
     <li class="logo">
@@ -717,18 +629,9 @@ nav#nav ul {
     </div>
 
   </ul>
-
 </nav>
 
-<!-- =======================================================
-     PAGE
-======================================================= -->
-
 <div class="page-layout">
-
-  <!-- =====================================================
-       FIXED PROFILE
-  ====================================================== -->
 
   <aside class="profile">
 
@@ -737,9 +640,7 @@ nav#nav ul {
       alt="Portrait of Alejandra Carrillo-Carlos"
     >
 
-    <h1>
-      Alejandra Carrillo-Carlos
-    </h1>
+    <h1>Alejandra Carrillo-Carlos</h1>
 
     <p class="profile-role">
       <strong>B.S. Student in Genomic Sciences</strong>
@@ -754,10 +655,7 @@ nav#nav ul {
 
     <div class="contact-cards">
 
-      <a
-        class="contact-card"
-        href="Cv.html"
-      >
+      <a class="contact-card" href="Cv.html">
         <i class="fas fa-file-lines"></i>
         <span>View CV</span>
       </a>
@@ -814,14 +712,7 @@ nav#nav ul {
 
   </aside>
 
-  <!-- =====================================================
-       MAIN CONTENT
-  ====================================================== -->
-
   <main class="main-content">
-
-    <!-- INTRO -->
-
 
     <header class="page-intro">
 
@@ -830,25 +721,21 @@ nav#nav ul {
         Immunology
       </span>
 
-      <h2>
-        Projects
-      </h2>
-  
-    </header>
+      <h2>Projects</h2>
 
-    <!-- PROJECTS -->
+    </header>
 
     <section class="content-section">
 
       <div class="section-header">
-
-        <h2>
-          Current Projects
-        </h2>
-
+        <h2>Current Projects</h2>
       </div>
 
       <div class="projects-list">
+
+        <!-- =================================================
+             PROJECT 1
+        ================================================== -->
 
         <article class="project-card">
 
@@ -893,9 +780,7 @@ nav#nav ul {
 
               <i class="fas fa-bullseye"></i>
 
-              <h3>
-                Research question
-              </h3>
+              <h3>Research question</h3>
 
               <p>
                 How does CD43 loss alter immune-cell signaling, behavior, and
@@ -908,9 +793,7 @@ nav#nav ul {
 
               <i class="fas fa-dna"></i>
 
-              <h3>
-                Approach
-              </h3>
+              <h3>Approach</h3>
 
               <p>
                 CRISPR-Cas9 genome editing, cell-line generation, validation,
@@ -923,9 +806,7 @@ nav#nav ul {
 
               <i class="fas fa-microscope"></i>
 
-              <h3>
-                Biological context
-              </h3>
+              <h3>Biological context</h3>
 
               <p>
                 Immune regulation, CD43 biology, and hematological malignancies.
@@ -966,17 +847,201 @@ nav#nav ul {
 
         </article>
 
+        <!-- =================================================
+             PROJECT 2
+        ================================================== -->
+
+        <article class="project-card">
+
+          <div class="project-card-header">
+
+            <div class="project-title-group">
+
+              <h2 class="project-title">
+                Exploring the Role of SPN-205: A Nonsense-Mediated
+                Decay-Targeted CD43 Isoform
+              </h2>
+
+              <p class="project-institution">
+                Institute of Biotechnology, National Autonomous University of Mexico
+              </p>
+
+            </div>
+
+            <span class="project-status">
+              <i class="fas fa-circle"></i>
+              Ongoing
+            </span>
+
+          </div>
+
+          <p class="project-authors">
+            Dulce Alejandra Carrillo Carlos,
+            Luis Eduardo Chipres Naranjo,
+            and Yvonne Jane Rosenstein Azoulay
+          </p>
+
+          <p class="project-description">
+            CD43 is a transmembrane sialomucin encoded by the <em>SPN</em>
+            gene and is primarily known for its functions in leukocyte
+            adhesion, migration, and activation. CD43 expression is also
+            altered across several cancers, where it may contribute to
+            immune evasion and tumor progression.
+          </p>
+
+          <p class="project-description">
+            This project investigates SPN-205, a predicted
+            nonsense-mediated decay-targeted isoform of <em>SPN</em>.
+            Nonsense-mediated decay is an RNA quality-control pathway that
+            removes transcripts containing premature termination codons.
+            Dysregulation of this pathway in cancer can stabilize aberrant
+            transcripts and remodel the transcriptome.
+          </p>
+
+          <p class="project-description">
+            Using publicly available transcriptomic datasets from The Cancer
+            Genome Atlas, we compared the expression of canonical
+            <em>SPN</em> and SPN-205 between tumor and normal samples.
+            SPN-205 was elevated in several tumor types, including acute
+            myeloid leukemia, thymoma, testicular germ cell tumors, diffuse
+            large B-cell lymphoma, pancreatic adenocarcinoma, and stomach
+            adenocarcinoma.
+          </p>
+
+          <p class="project-description">
+            In acute myeloid leukemia, SPN-205 expression reached
+            approximately 32% of canonical <em>SPN</em> expression. This
+            suggests that SPN-205 may represent more than transcriptional
+            noise and could have previously uncharacterized functions or
+            interactions in cancer. Ongoing analyses will evaluate whether
+            <em>SPN</em> and SPN-205 expression correlate with signatures
+            associated with proliferation, immune evasion, and resistance
+            to apoptosis.
+          </p>
+
+          <div class="project-details">
+
+            <div class="project-detail">
+
+              <i class="fas fa-bullseye"></i>
+
+              <h3>Research question</h3>
+
+              <p>
+                Is SPN-205 differentially expressed in cancer, and could it
+                contribute to cancer-associated molecular processes?
+              </p>
+
+            </div>
+
+            <div class="project-detail">
+
+              <i class="fas fa-chart-line"></i>
+
+              <h3>Approach</h3>
+
+              <p>
+                TCGA transcriptomic analysis, tumor-normal comparisons, and
+                gene-expression signature analysis.
+              </p>
+
+            </div>
+
+            <div class="project-detail">
+
+              <i class="fas fa-dna"></i>
+
+              <h3>Biological context</h3>
+
+              <p>
+                Alternative isoforms, nonsense-mediated decay, immune
+                regulation, and cancer biology.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="project-meta">
+
+            <span class="project-badge">
+              <i class="far fa-calendar"></i>
+              2024 – Present
+            </span>
+
+            <span class="project-badge">
+              <i class="fas fa-laptop-code"></i>
+              Computational
+            </span>
+
+            <span class="project-badge">
+              <i class="fas fa-chart-simple"></i>
+              Transcriptomics
+            </span>
+
+            <span class="project-badge">
+              <i class="fas fa-database"></i>
+              TCGA
+            </span>
+
+            <span class="project-badge">
+              <i class="fas fa-dna"></i>
+              RNA Biology
+            </span>
+
+            <span class="project-badge">
+              <i class="fas fa-shield-virus"></i>
+              Cancer Biology
+            </span>
+
+          </div>
+
+          <p class="project-funding">
+            <i class="fas fa-hand-holding-dollar"></i>
+            Funded by DGAPA, UNAM
+          </p>
+
+        </article>
+
       </div>
 
     </section>
-
-    <!-- FOOTER -->
 
     <footer class="site-footer">
 
       <p>
         © 2026 Alejandra Carrillo-Carlos
       </p>
+
+      <div class="footer-links">
+
+        <a href="mailto:alecarrillocarlos@gmail.com">
+          Email
+        </a>
+
+        <a
+          href="https://github.com/alejandracarrilloca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/alejandracarrilloca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://orcid.org/0009-0009-2252-3965"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ORCID
+        </a>
 
       </div>
 
