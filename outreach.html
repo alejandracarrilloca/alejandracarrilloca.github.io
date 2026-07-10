@@ -51,6 +51,10 @@ body {
   font-size: 1rem;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -58,6 +62,10 @@ img {
 
 a {
   color: inherit;
+}
+
+button {
+  font-family: inherit;
 }
 
 /* =========================================================
@@ -385,6 +393,7 @@ nav#nav ul {
   text-decoration: none;
   font-size: 0.86rem;
   font-weight: 700;
+  cursor: pointer;
 
   transition:
     color 0.2s ease,
@@ -401,6 +410,121 @@ nav#nav ul {
 
   transform: translateY(-2px);
   box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   PDF MODAL
+========================================================= */
+
+.pdf-modal {
+  position: fixed;
+  inset: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.72);
+
+  z-index: 1000;
+}
+
+.pdf-modal.open {
+  display: flex;
+}
+
+.pdf-modal-content {
+  width: min(1100px, 100%);
+  height: min(90vh, 900px);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  border-radius: 16px;
+  background: #ffffff;
+
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #dddddd;
+  background: #ffffff;
+}
+
+.pdf-modal-title {
+  min-width: 0;
+}
+
+.pdf-modal-title h2 {
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin-bottom: 0.1rem;
+}
+
+.pdf-modal-title p {
+  color: #777777;
+  font-size: 0.78rem;
+}
+
+.pdf-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.pdf-action {
+  min-height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 9px;
+
+  background: #fafafa;
+  color: #333333;
+
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.pdf-action:hover {
+  background: #eeeeee;
+  border-color: #999999;
+  color: #000000;
+}
+
+.pdf-close {
+  width: 40px;
+  padding: 0;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+
+  border: none;
+  background: #eeeeee;
 }
 
 /* =========================================================
@@ -611,6 +735,27 @@ nav#nav ul {
     flex-direction: column;
     gap: 0.8rem;
   }
+
+  .pdf-modal {
+    padding: 0.75rem;
+  }
+
+  .pdf-modal-content {
+    height: 94vh;
+    border-radius: 12px;
+  }
+
+  .pdf-modal-header {
+    align-items: flex-start;
+  }
+
+  .pdf-modal-title p {
+    display: none;
+  }
+
+  .pdf-action-text {
+    display: none;
+  }
 }
 
 @media (max-width: 450px) {
@@ -629,6 +774,14 @@ nav#nav ul {
 
   .mosquito-icon {
     font-size: 4.5rem;
+  }
+
+  .pdf-modal-header {
+    padding: 0.8rem;
+  }
+
+  .pdf-modal-title h2 {
+    font-size: 0.9rem;
   }
 }
 
@@ -652,14 +805,8 @@ nav#nav ul {
       <li><a href="projects.html">Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="talks.html">Talks</a></li>
+      <li><a href="outreach.html" class="active">Explore Science</a></li>
       <li><a href="portfolio.html">Gallery</a></li>
-
-      <li>
-        <a href="outreach.html" class="active">
-          Explore Science
-        </a>
-      </li>
-
     </div>
 
   </ul>
@@ -685,9 +832,10 @@ nav#nav ul {
     </h1>
 
     <p class="hero-description">
-      Science should be accessible beyond the laboratory. This page is a space for curious minds to explore biology through accessible
-      articles, videos, scientific news, and stories. Here, complex ideas
-      are explained clearly without losing the science behind them.
+      Science should be accessible beyond the laboratory. This page is a space
+      for curious minds to explore biology through accessible articles, videos,
+      scientific news, and stories. Here, complex ideas are explained clearly
+      without losing the science behind them.
     </p>
 
     <div class="hero-topics">
@@ -745,7 +893,8 @@ nav#nav ul {
         </h3>
 
         <p class="publication-source">
-          <em>¿Cómo ves?</em> · Universidad Nacional Autónoma de México · 2026
+          Carrillo Carlos, A. (2026). <em>El mosquito del metro de Londres</em>.
+          <em>¿Cómo ves?</em>, Universidad Nacional Autónoma de México.
         </p>
 
         <p class="article-summary">
@@ -773,17 +922,16 @@ nav#nav ul {
 
         </div>
 
-        <!-- Replace ARTICLE-LINK-HERE with the real article URL. -->
-
-        <a
-          class="content-link"
-          href="ARTICLE-LINK-HERE"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          class="content-link open-pdf"
+          type="button"
+          data-pdf="mosquito-metro-londres.pdf"
+          aria-haspopup="dialog"
+          aria-controls="pdf-modal"
         >
           <i class="fas fa-book-open"></i>
           Read the article
-        </a>
+        </button>
 
       </div>
 
@@ -802,7 +950,7 @@ nav#nav ul {
       <h2>Watch</h2>
 
       <p>
-         Live science television and radio program
+        Live science television and radio programming.
       </p>
 
     </div>
@@ -813,7 +961,7 @@ nav#nav ul {
 
         <iframe
           src="https://www.youtube.com/embed/2qFWdtZdDBg"
-          title="The London Underground Mosquito: Evolution Beneath the City"
+          title="Súbele a la Ciencia: The London Underground Mosquito"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -825,19 +973,19 @@ nav#nav ul {
       <div class="video-description">
 
         <p class="content-type">
-          Radio & Tv Science Outreach 
+          Radio and television science outreach
         </p>
 
         <h3>
-          Science on TV
+          The London Underground Mosquito: Evolution Beneath the City
         </h3>
 
         <p>
           During a live episode of <em>Súbele a la Ciencia</em>, broadcast from
           IEMS Iztapalapa V, Dulce Alejandra Carrillo Carlos and Addiel Antonio
           Platas Renteral discussed the story of the so-called London Underground
-          mosquito and explained what it reveals about evolution, adaptation, and
-          urban environments.
+          mosquito and explained what it reveals about evolution, adaptation,
+          and urban environments.
         </p>
 
         <div class="content-meta">
@@ -848,8 +996,13 @@ nav#nav ul {
           </span>
 
           <span class="meta-tag">
-            <i class="fab fa-youtube"></i>
+            <i class="fas fa-radio"></i>
             Radio
+          </span>
+
+          <span class="meta-tag">
+            <i class="fab fa-youtube"></i>
+            Video
           </span>
 
           <span class="meta-tag">
@@ -996,6 +1149,122 @@ nav#nav ul {
   </footer>
 
 </main>
+
+<!-- =======================================================
+     PDF MODAL
+======================================================= -->
+
+<div
+  class="pdf-modal"
+  id="pdf-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="pdf-modal-heading"
+  aria-hidden="true"
+>
+
+  <div class="pdf-modal-content">
+
+    <div class="pdf-modal-header">
+
+      <div class="pdf-modal-title">
+
+        <h2 id="pdf-modal-heading">
+          El mosquito del metro de Londres
+        </h2>
+
+        <p>
+          ¿Cómo ves? · Universidad Nacional Autónoma de México · 2026
+        </p>
+
+      </div>
+
+      <div class="pdf-modal-actions">
+
+        <a
+          class="pdf-action"
+          id="pdf-download"
+          href="mosquito-metro-londres.pdf"
+          download
+        >
+          <i class="fas fa-download"></i>
+          <span class="pdf-action-text">Download</span>
+        </a>
+
+        <button
+          class="pdf-action pdf-close"
+          id="close-pdf"
+          type="button"
+          aria-label="Close article viewer"
+        >
+          <i class="fas fa-xmark"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <iframe
+      class="pdf-viewer"
+      id="pdf-viewer"
+      title="El mosquito del metro de Londres article"
+      src=""
+    >
+    </iframe>
+
+  </div>
+
+</div>
+
+<script>
+
+const pdfModal = document.getElementById("pdf-modal");
+const pdfViewer = document.getElementById("pdf-viewer");
+const pdfDownload = document.getElementById("pdf-download");
+const openPdfButtons = document.querySelectorAll(".open-pdf");
+const closePdfButton = document.getElementById("close-pdf");
+
+function openPdfModal(pdfPath) {
+  pdfViewer.src = `${pdfPath}#view=FitH`;
+  pdfDownload.href = pdfPath;
+
+  pdfModal.classList.add("open");
+  pdfModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+
+  closePdfButton.focus();
+}
+
+function closePdfModal() {
+  pdfModal.classList.remove("open");
+  pdfModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+
+  pdfViewer.src = "";
+}
+
+openPdfButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const pdfPath = button.dataset.pdf;
+    openPdfModal(pdfPath);
+  });
+});
+
+closePdfButton.addEventListener("click", closePdfModal);
+
+pdfModal.addEventListener("click", (event) => {
+  if (event.target === pdfModal) {
+    closePdfModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && pdfModal.classList.contains("open")) {
+    closePdfModal();
+  }
+});
+
+</script>
 
 </body>
 </html>
