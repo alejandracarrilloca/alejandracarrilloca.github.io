@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+
 <title>Publications - Alejandra Carrillo-Carlos</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+
+<meta
+  name="description"
+  content="Scientific publications by Alejandra Carrillo-Carlos in immunology, CD43 biology, cancer biology, and genomics."
+/>
 
 <link
   rel="stylesheet"
@@ -19,138 +29,186 @@
 
 <style>
 
+/* =========================================================
+   GENERAL
+========================================================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: #ffffff;
-  color: #000000;
-  line-height: 1.6;
-  font-size: 1.15rem;
+  color: #171717;
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 a {
-  color: #59a3d4;
-  text-decoration: underline;
+  color: inherit;
 }
 
-/* ---------------- NAVBAR ---------------- */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 nav#nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: #ffffff;
-  border-bottom: 1px solid #dcdcdc;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e1e1e1;
+
   z-index: 100;
   padding: 1rem 2rem;
 }
 
 nav#nav ul {
+  max-width: 1350px;
+  margin: 0 auto;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
   list-style: none;
 }
 
 .logo a {
   color: #000000;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
 .menu {
   display: flex;
-  gap: 2.5rem;
-  font-size: 1.15rem;
+  align-items: center;
+  gap: 1.45rem;
+  list-style: none;
 }
 
 .menu a {
   color: #000000;
   text-decoration: none;
+  font-size: 0.96rem;
   font-weight: 600;
-  border-bottom: 2px solid transparent;
+
   padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+
   transition:
     color 0.2s ease,
     border-color 0.2s ease;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu a.active {
   color: #F5277D;
   border-color: #F5277D;
 }
 
-/* ---------------- PAGE LAYOUT ---------------- */
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
 
-#top {
-  display: flex;
+.page-layout {
+  width: min(1320px, calc(100% - 3rem));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 285px minmax(0, 1fr);
   gap: 4rem;
-  margin: 3rem 10rem;
-  flex-wrap: wrap;
+
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
-/* ---------------- PROFILE ---------------- */
+/* =========================================================
+   FIXED PROFILE
+========================================================= */
 
 .profile {
   position: fixed;
-  top: 9rem;
-  left: 6rem;
+  top: 8.5rem;
+
   width: 285px;
   text-align: center;
-  z-index: 10;
 }
 
 .profile img {
   width: 190px;
   height: 190px;
-  border-radius: 50%;
+
   object-fit: cover;
-  margin-bottom: 0.9rem;
+  border-radius: 50%;
+
+  margin: 0 auto 0.9rem;
 }
 
-.profile h2 {
-  font-size: 1.15rem;
-  line-height: 1.3;
+.profile h1 {
+  font-size: 1.18rem;
+  line-height: 1.35;
   margin-bottom: 0.25rem;
 }
 
-.profile p {
-  font-size: 0.95rem;
-  line-height: 1.4;
+.profile-role {
   color: #666666;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-bottom: 0.8rem;
+}
+
+.profile-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  color: #777777;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .profile hr {
   width: 70%;
-  margin: 0.8rem auto 1rem;
+  margin: 0 auto 1rem;
+
   border: none;
   border-top: 1px solid #e3e3e3;
 }
 
-/* ---------------- CONTACT BUTTONS ---------------- */
+/* =========================================================
+   CONTACT BUTTONS
+========================================================= */
 
 .contact-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  margin-top: 1rem;
 }
 
 .contact-card {
   min-height: 42px;
-  padding: 0.55rem 0.7rem;
+  padding: 0.55rem 0.65rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 7px;
 
   border: 1px solid #d7d7d7;
   border-radius: 11px;
@@ -158,10 +216,9 @@ nav#nav ul {
 
   color: #444444;
   text-decoration: none;
-  font-size: 0.88rem;
+
+  font-size: 0.85rem;
   font-weight: 600;
-  line-height: 1.2;
-  text-align: center;
 
   transition:
     background 0.2s ease,
@@ -175,114 +232,312 @@ nav#nav ul {
   background: #f1f1f1;
   border-color: #999999;
   color: #000000;
+
   transform: translateY(-2px);
   box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
 }
 
 .contact-card i {
   color: #666666;
-  font-size: 1rem;
-  flex-shrink: 0;
+  font-size: 0.95rem;
 }
 
 .contact-card:hover i {
   color: #000000;
 }
 
-/* ---------------- MAIN CONTENT ---------------- */
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
 
-.text {
-  flex: 1;
-  min-width: 300px;
-  max-width: 900px;
-  margin-left: 300px;
-  text-align: justify;
+.main-content {
+  min-width: 0;
+  grid-column: 2;
 }
 
-.text header h1 {
-  font-size: 1.45rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #000000;
-  padding-bottom: 0.3rem;
+/* =========================================================
+   PAGE INTRO
+========================================================= */
+
+.page-intro {
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid #e1e1e1;
 }
 
-/* ---------------- YEAR ---------------- */
+.page-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
-.year {
-  font-size: 1.2rem;
+  color: #F5277D;
+  font-size: 0.76rem;
   font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.9rem;
+}
+
+.page-intro h2 {
+  max-width: 760px;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+
+  margin-bottom: 1rem;
+}
+
+.page-intro p {
+  max-width: 780px;
+
   color: #555555;
-  margin: 1.2rem 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
-/* ---------------- PUBLICATION CARD ---------------- */
+.publication-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
 
-.publication {
-  padding: 1.4rem 0 1.8rem;
-  border-bottom: 1px solid #dddddd;
+  margin-top: 1.5rem;
 }
 
-.publication:first-of-type {
-  padding-top: 0.4rem;
+.publication-topic {
+  display: inline-block;
+
+  padding: 0.35rem 0.8rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+
+  background: #fafafa;
+  color: #555555;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.content-section {
+  padding-top: 3.7rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.4rem;
+
+  border-bottom: 2px solid #171717;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.section-header p {
+  max-width: 470px;
+
+  color: #666666;
+  font-size: 0.88rem;
+  text-align: right;
+}
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.publication-year {
+  margin-bottom: 2.5rem;
+}
+
+.year-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: #555555;
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+}
+
+.year-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e1e1e1;
+}
+
+/* =========================================================
+   PUBLICATION CARD
+========================================================= */
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.publication-card {
+  padding: 1.7rem;
+
+  border: 1px solid #dddddd;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-3px);
+  border-color: #c6c6c6;
+  box-shadow: 0 9px 24px rgba(0, 0, 0, 0.06);
+}
+
+.publication-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  margin-bottom: 0.8rem;
+}
+
+.publication-title-group {
+  min-width: 0;
 }
 
 .publication-title {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   line-height: 1.4;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.4rem;
+}
+
+.publication-type {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.32rem 0.7rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 999px;
+
+  background: #fafafa;
+  color: #555555;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.publication-type i {
+  color: #F5277D;
 }
 
 .authors {
-  color: #333333;
-  margin-bottom: 0.65rem;
+  color: #444444;
+  font-size: 0.9rem;
+  line-height: 1.75;
+
+  margin-bottom: 0.8rem;
+}
+
+.authors strong {
+  color: #171717;
+  font-weight: 700;
 }
 
 .journal {
   color: #666666;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+
   margin-bottom: 1rem;
+}
+
+.journal strong {
+  color: #444444;
+}
+
+.publication-citation {
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+
+  background: #fafafa;
+  color: #666666;
+
+  font-size: 0.82rem;
+  line-height: 1.65;
+
+  margin-bottom: 1.1rem;
 }
 
 .publication-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-bottom: 1rem;
+  gap: 0.5rem;
+
+  margin-bottom: 1.1rem;
 }
 
 .publication-badge {
-  display: inline-block;
-  padding: 0.28rem 0.7rem;
-  border: 1px solid #d6d6d6;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.28rem 0.65rem;
+  border: 1px solid #dddddd;
   border-radius: 999px;
+
   background: #fafafa;
-  color: #555555;
-  font-size: 0.82rem;
+  color: #666666;
+
+  font-size: 0.73rem;
   font-weight: 600;
 }
+
+/* =========================================================
+   PUBLICATION LINKS
+========================================================= */
 
 .publication-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.7rem;
 }
 
 .publication-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 0.5rem;
 
-  padding: 0.55rem 0.9rem;
-  border: 1px solid #d7d7d7;
-  border-radius: 10px;
-  background: #fafafa;
+  padding: 0.58rem 0.85rem;
+  border: 1px solid #d2d2d2;
+  border-radius: 9px;
 
+  background: #ffffff;
   color: #444444;
+
   text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
 
   transition:
     background 0.2s ease,
@@ -293,16 +548,82 @@ nav#nav ul {
 }
 
 .publication-link:hover {
-  background: #f1f1f1;
+  background: #f2f2f2;
   border-color: #999999;
   color: #000000;
+
   transform: translateY(-2px);
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
 }
 
-/* ---------------- MOBILE ---------------- */
+.publication-link.primary {
+  background: #171717;
+  border-color: #171717;
+  color: #ffffff;
+}
 
-@media (max-width: 700px) {
+.publication-link.primary:hover {
+  background: #F5277D;
+  border-color: #F5277D;
+  color: #ffffff;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  margin-top: 5rem;
+  padding-top: 1.4rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  border-top: 1px solid #dddddd;
+
+  color: #777777;
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #555555;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #F5277D;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .menu {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .page-layout {
+    width: min(1200px, calc(100% - 2rem));
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .profile {
+    width: 260px;
+  }
+}
+
+@media (max-width: 780px) {
 
   nav#nav {
     padding: 0.9rem 1rem;
@@ -310,48 +631,68 @@ nav#nav ul {
 
   nav#nav ul {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.85rem;
   }
 
   .menu {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.8rem 1rem;
-    font-size: 1rem;
+    gap: 0.65rem 1rem;
   }
 
-  #top {
-    flex-direction: column;
-    margin: 9.5rem 1.5rem 2rem;
+  .page-layout {
+    display: block;
+    width: min(100% - 2rem, 1180px);
+
+    padding-top: 9rem;
   }
 
   .profile {
     position: static;
     width: 100%;
-    margin-bottom: 2rem;
+    max-width: 340px;
+
+    margin: 0 auto 3rem;
   }
 
-  .profile img {
-    width: 180px;
-    height: 180px;
+  .main-content {
+    width: 100%;
   }
 
-  .contact-cards {
-    max-width: 320px;
-    margin: 1rem auto 0;
+  .page-intro {
+    padding-top: 1rem;
   }
 
-  .text {
-    margin-left: 0;
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .section-header p {
     text-align: left;
+  }
+
+  .publication-card-header {
+    flex-direction: column;
+    gap: 0.8rem;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 520px) {
+
+  .page-intro h2 {
+    font-size: 2.45rem;
+  }
 
   .contact-cards {
     grid-template-columns: 1fr;
     max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .publication-card {
+    padding: 1.3rem;
   }
 
   .publication-links {
@@ -361,6 +702,11 @@ nav#nav ul {
   .publication-link {
     width: 100%;
   }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }
 
 </style>
@@ -368,7 +714,12 @@ nav#nav ul {
 
 <body>
 
+<!-- =======================================================
+     NAVIGATION
+======================================================= -->
+
 <nav id="nav">
+
   <ul>
 
     <li class="logo">
@@ -377,29 +728,44 @@ nav#nav ul {
 
     <div class="menu">
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
       <li><a href="talks.html">Talks</a></li>
       <li><a href="portfolio.html">Gallery</a></li>
       <li><a href="outreach.html">Explore Science</a></li>
-
     </div>
 
   </ul>
+
 </nav>
 
-<section id="top">
+<!-- =======================================================
+     PAGE
+======================================================= -->
+
+<div class="page-layout">
+
+  <!-- =====================================================
+       FIXED PROFILE
+  ====================================================== -->
 
   <aside class="profile">
 
     <img
       src="tu-foto.jpg"
       alt="Portrait of Alejandra Carrillo-Carlos"
-    />
+    >
 
-    <h2>Alejandra Carrillo-Carlos</h2>
+    <h1>
+      Alejandra Carrillo-Carlos
+    </h1>
 
-    <p>
+    <p class="profile-role">
       <strong>B.S. Student in Genomic Sciences</strong>
+    </p>
+
+    <p class="profile-location">
+      <i class="fas fa-location-dot"></i>
+      Morelos, Mexico
     </p>
 
     <hr>
@@ -408,18 +774,18 @@ nav#nav ul {
 
       <a
         class="contact-card"
-        href="mailto:alecarrillocarlos@gmail.com"
+        href="Cv.html"
       >
-        <i class="fas fa-envelope"></i>
-        <span>Email</span>
+        <i class="fas fa-file-lines"></i>
+        <span>View CV</span>
       </a>
 
       <a
         class="contact-card"
-        href="Cv.html"
+        href="mailto:alecarrillocarlos@gmail.com"
       >
-        <i class="fas fa-file-lines"></i>
-        <span>CV</span>
+        <i class="fas fa-envelope"></i>
+        <span>Email</span>
       </a>
 
       <a
@@ -466,64 +832,224 @@ nav#nav ul {
 
   </aside>
 
-  <main class="text">
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
 
-    <header>
-      <h1>Publications</h1>
-    </header>
+  <main class="main-content">
 
-    <div class="year">2026</div>
+    <!-- INTRO -->
 
-    <article class="publication">
+    <header class="page-intro">
 
-      <h2 class="publication-title">
-        CD43: Recent Advances and Emerging Functions
+      <span class="page-label">
+        <i class="fas fa-book-open"></i>
+        Scientific Publications
+      </span>
+
+      <h2>
+        Publications
       </h2>
 
-      <p class="authors">
-        Mariana Diupotex,
-        Veronica Rojo-Leon,
-        Luis Eduardo Chipres-Naranjo,
-        Estefanía Alemán-Navarro,
-        Emiliano Rubio-Blancas,
-        <strong>Alejandra Carrillo-Carlos</strong>,
-        Gabriel Ramírez-Vilchis,
-        Jazmin López-Acosta,
-        José Luis Maravillas-Montero,
-        and Yvonne Rosenstein
+      <p>
+        Peer-reviewed scientific work in immunology, CD43 biology,
+        cell signaling, cancer biology, and immune regulation.
       </p>
 
-      <p class="journal">
-        <em>Journal of Leukocyte Biology</em>, Volume 118, 2026.
-      </p>
+      <div class="publication-topics">
 
-      <div class="publication-meta">
-        <span class="publication-badge">Review Article</span>
-        <span class="publication-badge">Immunology</span>
-        <span class="publication-badge">CD43</span>
-        <span class="publication-badge">Open Access</span>
+        <span class="publication-topic">
+          Immunology
+        </span>
+
+        <span class="publication-topic">
+          CD43
+        </span>
+
+        <span class="publication-topic">
+          Cell Signaling
+        </span>
+
+        <span class="publication-topic">
+          Cancer Biology
+        </span>
+
       </div>
 
-      <div class="publication-links">
+    </header>
+
+    <!-- PUBLICATIONS -->
+
+    <section class="content-section">
+
+      <div class="section-header">
+
+        <h2>
+          Peer-Reviewed Articles
+        </h2>
+
+        <p>
+          Publications are organized by year, beginning with the most recent.
+        </p>
+
+      </div>
+
+      <section class="publication-year">
+
+        <div class="year-heading">
+          2026
+        </div>
+
+        <div class="publications-list">
+
+          <article class="publication-card">
+
+            <div class="publication-card-header">
+
+              <div class="publication-title-group">
+
+                <h2 class="publication-title">
+                  CD43: Recent Advances and Emerging Functions
+                </h2>
+
+              </div>
+
+              <span class="publication-type">
+                <i class="fas fa-file-lines"></i>
+                Review Article
+              </span>
+
+            </div>
+
+            <p class="authors">
+              Mariana Diupotex,
+              Veronica Rojo-Leon,
+              Luis Eduardo Chipres-Naranjo,
+              Estefanía Alemán-Navarro,
+              Emiliano Rubio-Blancas,
+              <strong>Alejandra Carrillo-Carlos</strong>,
+              Gabriel Ramírez-Vilchis,
+              Jazmin López-Acosta,
+              José Luis Maravillas-Montero,
+              and Yvonne Rosenstein
+            </p>
+
+            <p class="journal">
+              <strong>Journal of Leukocyte Biology</strong>,
+              Volume 118, Issue 7, July 2026, qiag084.
+              Published June 27, 2026.
+            </p>
+
+            <div class="publication-citation">
+              Diupotex M, Rojo-Leon V, Chipres-Naranjo LE,
+              Alemán-Navarro E, Rubio-Blancas E,
+              Carrillo-Carlos A, Ramírez-Vilchis G,
+              López-Acosta J, Maravillas-Montero JL,
+              Rosenstein Y. CD43: Recent Advances and Emerging Functions.
+              <em>Journal of Leukocyte Biology</em>. 2026;118(7):qiag084.
+            </div>
+
+            <div class="publication-meta">
+
+              <span class="publication-badge">
+                <i class="fas fa-shield-virus"></i>
+                Immunology
+              </span>
+
+              <span class="publication-badge">
+                <i class="fas fa-dna"></i>
+                CD43
+              </span>
+
+              <span class="publication-badge">
+                <i class="fas fa-arrows-to-circle"></i>
+                Cell Signaling
+              </span>
+
+              <span class="publication-badge">
+                <i class="fas fa-lock-open"></i>
+                Open Access
+              </span>
+
+            </div>
+
+            <div class="publication-links">
+
+              <a
+                class="publication-link primary"
+                href="https://doi.org/10.1093/jleuko/qiag084"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-arrow-up-right-from-square"></i>
+                View Article
+              </a>
+
+              <a
+                class="publication-link"
+                href="https://doi.org/10.1093/jleuko/qiag084"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-link"></i>
+                DOI
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+      <p>
+        © 2026 Alejandra Carrillo-Carlos
+      </p>
+
+      <div class="footer-links">
+
+        <a href="mailto:alecarrillocarlos@gmail.com">
+          Email
+        </a>
 
         <a
-          class="publication-link"
-          href="https://doi.org/10.1093/jleuko/qiag084"
+          href="https://github.com/alejandracarrilloca"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fas fa-arrow-up-right-from-square"></i>
-          <span>View Article</span>
+          GitHub
         </a>
 
+        <a
+          href="https://www.linkedin.com/in/alejandracarrilloca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://orcid.org/0009-0009-2252-3965"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ORCID
+        </a>
 
       </div>
 
-    </article>
+    </footer>
 
   </main>
 
-</section>
+</div>
 
 </body>
 </html>
